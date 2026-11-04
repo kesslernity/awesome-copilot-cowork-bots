@@ -7,17 +7,23 @@ repository. They assume no knowledge of Cowork, of skills, or of what a `.zip` i
 folder called `dist`. Hand one to a colleague and they should be able to install the thing and
 get a result without asking you anything.
 
-Every page answers the same four questions in the same order:
+The top half of every page is two columns answering the only two questions a reader has
+before they decide:
 
-1. **What is Cowork**, in three sentences, because most readers have not used it
-2. **What this bot gives you**, in the words of its own description
-3. **How to install it**, in five steps with the real menu names
-4. **What it will never do without asking you**, which is the part that earns the trust
+- **Do this** — the five steps, led by a **live download button** that points straight at the
+  bot's archive in `dist/`. It is a real PDF link annotation, so it is clickable from any
+  viewer. A guide that says "download the file" without a link is a dead end.
+- **And you get back** — three concrete lines, next to **what it will never do without
+  asking you**, which is the pair that decides whether someone installs it.
 
-Each page also carries the bot's own stated principle, pulled from `## Definition of done` in
-its `SKILL.md`. Those lines are the honest part of this catalogue: *a flat week is normal*,
-*finding nobody is a real and useful answer*, *silence is the success state*. They are the
-reason these bots are worth installing, so they are set in the largest type on the page.
+Below that sits the bot's own stated principle, pulled from `## Definition of done` in its
+`SKILL.md`: *a flat week is normal*, *finding nobody is a real and useful answer*, *silence is
+the success state*. Those lines are the honest part of this catalogue and the reason the bots
+are worth installing, so they are set in the largest type on the page.
+
+Then how to put it on a schedule, and four footnotes. "What is Cowork" is one of those
+footnotes rather than the opening, because a reader holding the PDF wants the action first
+and the background second.
 
 ## Rebuilding them
 
@@ -54,3 +60,9 @@ true.** If you materially change a skill's Output section, change its entry too.
 absolutely positioned, so content can run underneath it and Chrome still emits a single page.
 The check loads each page at A4 size and measures the millimetres between the last content
 block and the footer rule, failing under 2mm. It caught five collisions the page count did not.
+
+It finds that last block **structurally**, by walking the body's children, rather than by
+naming a selector. The first version named `.pre`. Then the cover grew a download bar below
+`.pre`, the check went on measuring the block above it, and it passed a page whose download
+bar was sitting on top of the footer. A check pinned to a selector stops covering the page the
+moment the page changes shape.
