@@ -301,6 +301,28 @@ would otherwise forget.</div>
 </body></html>"""
 
 
+# Chrome stamps the render time into every PDF, so an unchanged guide still produces
+# different bytes on every build. These are committed, so that is 7.7 MB of identical-content
+# churn per rebuild. Same fix as the zips in lint_skills.py: pin the clock.
+#
+# The replacement must be the SAME LENGTH. A PDF's cross-reference table holds byte offsets,
+# so shortening a string by one character moves everything after it and corrupts the file.
+PDF_EPOCH = b"D:19800101000000+00'00'"
+
+
+def pin_pdf_dates(pdf):
+    raw = pdf.read_bytes()
+    fixed = re.sub(
+        rb"/(CreationDate|ModDate)\s*\(([^)]*)\)",
+        lambda m: b"/" + m.group(1) + b"(" + PDF_EPOCH.ljust(len(m.group(2)))[: len(m.group(2))] + b")"
+        if len(m.group(2)) >= len(PDF_EPOCH)
+        else m.group(0),
+        raw,
+    )
+    if fixed != raw:
+        pdf.write_bytes(fixed)
+
+
 def bot_facts(bot_dir):
     """Everything a guide page states about one bot, parsed once.
 
@@ -543,6 +565,7 @@ def main():
              "--virtual-time-budget=4000", h.as_uri()],
             check=True, capture_output=True,
         )
+        pin_pdf_dates(pdf)
         made.append(pdf)
 
     if not args.html and not args.only:
