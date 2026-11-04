@@ -175,3 +175,89 @@ Two could change pack sizing and should be settled in a tenant before Phase 3 fi
 2. **Does a shared skill consume the recipient's allowance?** Not stated anywhere fetched.
 
 Neither blocks starting. Both belong in `docs/install.md` as a caveat until tested.
+
+---
+
+# Revision 2, 4 Nov 2026: Mathieu's additions
+
+Nine designs added to the brief, with conversion recipes. Verdicts below, after checking each
+against the 37 skills already live in `awesome-copilot-cowork-skills`.
+
+## Checked for overlap first
+
+Two collide with skills that already exist, which the original note did not catch.
+
+| Addition | Existing skill | Verdict |
+|---|---|---|
+| **Commitment Tracker** | `commitment-catcher` | 🔴 **Already shipped.** It scans both directions over 24 hours, keeps a ledger with open, done and overdue, flags overdue first and creates To Do entries. The genuine delta is the **event-driven trigger**, **Excel instead of commitments.md**, and **silence as the success state**. That is a v2 of an existing skill, not a new bot. Do not ship a second one |
+| **Competition Monitor** | `news-monitor-digest` | ✅ **Keep, distinct.** The existing skill digests 5 to 8 items for a role. This one suppresses everything except a material change. Opposite disciplines, and the suppression one is the harder and rarer design |
+
+The other seven are clean against the existing repo.
+
+## Added to the catalogue
+
+| Bot | Pack | Why it earns a place |
+|---|---|---|
+| **Subscription Hunter** | Finance & FinOps | Zero connectors, entirely mailbox and search. The best first bot in the catalogue and the exemplar everything else is modelled on |
+| **Project Decomposer** | Team Lead | The strongest idea in the set. A skill that **does no work**: it only breaks a project into owned tasks each carrying its own verification criteria, one Adaptive Card per task. Nothing in the existing 37 does this, and it is the honest Cowork answer to Grok's roster pattern |
+| **Competition Monitor** | Comms | Scheduled Deep Research with the discipline encoded as a rule: alert only on material change. The suppression is the product |
+| **AEO Monitor** | Comms | Tracks brand position in assistant answers, weekly trend sheet. No existing Cowork skill does this anywhere that Phase 1 found. **Caveat below** |
+| **Account Expert** | Sales & BD (new pack) | Reinstated. One skill owns one customer, rebuilding context from mail, meetings and files. This is exactly the non-CRM gap the portability table already identified |
+
+**Dropped from Phase 2's cut list and reinstated:** Account Health, in the Account Expert form.
+Its Phase 2 cut assumed the CRM version; this version needs no CRM and is not redundant with
+Sales for Cowork.
+
+## Re-scoped rather than added
+
+| Bot | Change |
+|---|---|
+| **Talent Scout** | The recipe keeps drafts-only outreach, scoring to Excel and Adaptive Card approval gates, which all port. "Skips people in the ATS" still needs an ATS connector that Phase 1 did not find, so that step is a documented gap, not a feature. Ships as **Interview Loop Coordinator** plus **Internal Expert Finder** |
+| **Bug Reproduction** | Phase 2 said don't port, and the reproduction half still does not: no terminal, no staging, no arbitrary browser. The **handoff pattern does** port, and an Azure DevOps plugin exists in the partner catalogue. Ships as **Defect Intake and Triage**: structured intake, Adaptive Card, approval, assignment. It does not reproduce anything, and the card says so |
+
+## Not added
+
+**Family agent and personal shopper.** Genuinely good demo material, and deliberately out of
+scope. This repo's pitch is now the governance boundary, and a gift-research bot sitting beside a
+permit-to-work prohibition undercuts the thing that makes the catalogue credible to an admin. It
+belongs in a post, not in the packs.
+
+## The design rule, adopted
+
+Mathieu's selection criteria is now the gate every bot passes, written into
+`templates/bot-template/README.md` as a five-point checklist:
+
+> one narrow job · a recurring trigger · an obvious definition of done · reviewable in seconds ·
+> **silence as the success state**
+
+The fifth is the one most catalogues miss and it is now a required section in every `SKILL.md`
+and a required test in every `tests.md`. A bot that manufactures a finding to look useful trains
+its reader to ignore it.
+
+## Revised totals
+
+| Pack | Skills | Schedules |
+|---|---|---|
+| Core / Executive | 6 | 3 |
+| Team Lead (+ Project Decomposer) | 5 | 2 |
+| Finance & FinOps (+ Subscription Hunter) | 5 | 3 |
+| People & HR | 3 | 0 |
+| IT & Ops (+ Defect Intake) | 5 | 2 |
+| Projects | 4 | 1 |
+| Comms (+ Competition Monitor, AEO Monitor) | 4 | 3 |
+| Sales & BD (Account Expert) | 1 | 1 |
+| **All eight** | **33 of 50** | **15 of 25** |
+
+Still inside both caps with room, which remains a consequence of the cap being 50 and not 20.
+
+## UNVERIFIED, blocking AEO Monitor
+
+The AEO Monitor assumes Cowork's **Deep Research** can retrieve how a brand is represented in
+other assistants' answers. Phase 1 confirmed Deep Research exists and "conducts in-depth research
+across multiple sources", but **nothing establishes that it can query ChatGPT, Gemini or
+Perplexity**, and there is good reason to doubt it: those are competitor products behind their own
+interfaces, not open web sources.
+
+The honest version of this bot tracks **what the open web says about the brand** on a weekly
+trend sheet, which Deep Research can plausibly do. Shipping it as an AEO tracker without testing
+would be the exact invention this brief forbids. Flagged for a tenant test before it ships.
