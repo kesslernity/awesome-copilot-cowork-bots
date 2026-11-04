@@ -191,6 +191,56 @@ plugin path.
 
 ---
 
+## Resolved 4 November 2026
+
+Two questions were open at Phase 2 and both are now answered from Microsoft's own wording, plus a
+first live upload into a real tenant.
+
+**Do plugin skills count against the 50?** No. The cap is stated as the number you can *create*,
+and Learn says a plugin's skills "appear alongside the built-in skills" and "work the same way as
+built-in skills". You do not create a plugin skill, so it does not consume the create-allowance.
+
+🔴 **Microsoft's own two pages disagree on which list they land in.** `cowork-customize` describes
+the Your skills list as holding skills "you created or added through plugins", while `use-cowork`
+groups plugin skills with the built-ins. The contradiction does not change the cap answer, because
+the cap is on creation either way, but it is worth knowing before anyone reasons from the UI.
+
+**Does a shared skill consume the recipient's allowance?** No, for the same reason: the recipient
+uses a skill they did not create. The sharer keeps one copy, which is why Learn offers **Re-share**
+to push an update to everyone it was shared with rather than asking each recipient to re-add it.
+
+**Upload confirmed live.** An archive from this repo uploaded into a real tenant with no errors on
+4 Nov 2026, which settles the archive shape for all 23.
+
+## Newly found, 4 November 2026
+
+- **Skill evaluation is scored.** Bands are Excellent (85+), Good (70-84), Needs work (50-69) and
+  Poor (below 50), with a **launch floor** gate, a **regression check** against a skill's baseline
+  after it ships, and a single **Skill Report** that leads with the verdict.
+- 🔴 **Two documented failure modes that bite silently**, both about the description:
+  a description over the character limit means **the skill never loads**, and a description with
+  no trigger phrases means **the skill never fires**. The character limit itself is not stated in
+  anything fetched. The longest description in this repo is 415 characters and uploaded without
+  error, so the ceiling is above that.
+- 🔴 **Stated limitation, in tension with the evaluation above:** "Microsoft doesn't validate
+  custom skills created by users." That sits in the FAQ's by-design limitations list while the
+  scoring and gates sit on the create-a-skill page. The likeliest reading is that the evaluation
+  applies to the guided builder and not to a file dropped into OneDrive, but that is a reading,
+  not a stated fact. Treat user-authored skills as unvalidated.
+- **Other by-design limits:** Cowork cannot reach local files, cannot delete anything in OneDrive
+  or SharePoint, cannot read encrypted files, and attachments must be under 200 MB.
+- **Plugin packages can be uploaded**, and Cowork "converts a Claude or other compatible package
+  into a publishable package", which is a route this catalogue could use later for org-wide
+  distribution rather than per-user uploads.
+- **More role plugins than Phase 1 found:** Accounting for Cowork (Frontier Public), Finance for
+  Cowork and Capital Markets for Cowork, alongside Legal, Sales, Service and Education.
+- **Partner connectors now named at launch** include Jira, Salesforce, ServiceNow, SAP ERP and
+  Workday HCM, which changes several "port with plugin" verdicts from theoretical to available.
+- **Brand templates:** Cowork applies an organisation's brand template to PowerPoint it creates.
+- **Local browser use (Frontier)** lets Cowork drive Microsoft Edge on the user's device with
+  their existing sign-ins. This narrows, but does not close, the cloud-computer gap in
+  docs/conversion-guide.md.
+
 ## UNVERIFIED
 
 - **Exact GA date.** A prior session established 16 June 2026 as worldwide GA from the Microsoft
@@ -198,7 +248,4 @@ plugin path.
 - **Frontier status of individual features.** The App skill is labelled "(Frontier)" in Learn, but
   the current Frontier-versus-GA boundary for Cowork as a whole was not confirmed from a fetched
   page in this session.
-- **Whether a plugin's bundled skills count against the 50-skill user cap.** Learn describes the cap
-  for skills "you create"; plugin skills appear in a separate list. Not stated either way. This
-  affects pack budgeting and should be tested in a tenant.
-- **Whether a shared skill consumes the recipient's 50-skill allowance.** Not stated.
+- **The description character limit.** Not stated anywhere fetched. Over it, a skill never loads.
