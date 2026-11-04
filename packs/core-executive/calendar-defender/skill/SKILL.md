@@ -30,6 +30,9 @@ Finds the week's conflicts and the meetings that should not exist, and proposes,
 Four sections: conflicts, meetings without a stated purpose, focus time against target, and
 proposed changes, each naming the exact meeting and the exact action.
 
+A section with no findings is omitted, not filled. When all four are empty, the whole output is
+the single clean-week line below and nothing else.
+
 ## Definition of done
 Every conflict lists its tie-breakers, every purposeless meeting names its organiser, focus time
 is measured against the target, and every proposal names a specific meeting.
