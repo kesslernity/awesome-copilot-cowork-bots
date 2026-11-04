@@ -10,7 +10,7 @@ Finds the week's conflicts and the meetings that should not exist, and proposes,
 ## Inputs
 - **Calendar Management** for the week ahead
 - **Email** and **Meetings** for whether an agenda exists and what each meeting is for
-- `references/config.md` for focus-time targets, protected hours and meetings never touched
+- `references/config.md` for focus-time targets, working hours and meetings never touched
 
 ## Procedure
 1. **Load the window** from config, normally the next seven days.
@@ -31,7 +31,7 @@ Four sections: conflicts, meetings without a stated purpose, focus time against 
 proposed changes, each naming the exact meeting and the exact action.
 
 A section with no findings is omitted, not filled. When all four are empty, the whole output is
-the single clean-week line below and nothing else.
+the single clean-week line below, plus any skipped-check note that applies, and nothing else.
 
 ## Definition of done
 Every conflict lists its tie-breakers, every purposeless meeting names its organiser, focus time

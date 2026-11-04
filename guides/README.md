@@ -41,6 +41,18 @@ python3 tools/build_guides.py --only subscription-hunter
 Rendering is HTML and CSS through headless Chrome's `--print-to-pdf`. The bundle uses
 `pdfunite` from poppler.
 
+**Rebuilding an unchanged guide produces a byte-identical file**, so `git status` after a build
+lists exactly the pages whose content changed and nothing else. That takes two different fixes,
+because the two tools spoil it in two different ways. Chrome stamps the render time, so
+`pin_pdf_dates` rewrites `/CreationDate` and `/ModDate` to a fixed 1980 value, strictly at equal
+length because the cross-reference table holds byte offsets. `pdfunite` stamps a random `/ID`
+into the trailer, so `pin_pdf_id` replaces the whole array with one canonical value. That one is
+allowed to change the file's length, because the trailer sits after the cross-reference table and
+`startxref` points backwards at it, so no stored offset moves.
+
+The bundle went unpinned for a while and churned on every build, which is worse than it sounds:
+a diff that always appears is a diff nobody reads, and it hides the one that matters.
+
 ## How they stay true
 
 Almost everything on a page is read out of the bot's `SKILL.md` at build time: the title, the

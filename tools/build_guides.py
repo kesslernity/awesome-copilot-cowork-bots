@@ -324,6 +324,72 @@ def pin_pdf_dates(pdf):
         pdf.write_bytes(fixed)
 
 
+def pin_pdf_id(pdf):
+    """pdfunite stamps a random /ID into the trailer on every run.
+
+    All 28 pages are byte-identical build to build, but the bundle was not, so every rebuild
+    produced a diff that looked like a content change and wasn't. That is worse than untidy:
+    it means `git status` can no longer tell you whether a guide actually changed, which is
+    the one question the reproducible build was there to answer.
+
+    The two ID values are sixteen RANDOM bytes each, so they can contain "(", ")" or a
+    backslash. Two earlier attempts failed on exactly those bytes. A regex plus a search for
+    the closing "]" broke whenever a random byte was one of those characters. Walking the
+    strings with PDF's escaping rules fixed the parse but not the churn, because preserving
+    each file's own length faithfully preserves the difference: a byte that needs escaping
+    makes the string seventeen bytes rather than sixteen, so two runs stayed two files.
+
+    So the whole /ID array is replaced with one canonical value, not padded to match. That
+    changes the trailer's length, which is safe here and only here: the trailer sits after
+    the cross-reference table, and startxref points backwards at that table, so nothing in
+    the file holds an offset that moves. pin_pdf_dates cannot take this liberty, which is
+    why it is strict about length and this is not.
+    """
+    raw = pdf.read_bytes()
+    start = raw.rfind(b"/ID")
+    if start < 0:
+        return
+    i = raw.find(b"[", start)
+    if i < 0:
+        return
+    i += 1
+
+    spans = []
+    for _ in range(2):
+        while i < len(raw) and raw[i:i + 1] in b" \r\n\t":
+            i += 1
+        if raw[i:i + 1] != b"(":
+            return
+        depth, j = 0, i
+        while j < len(raw):
+            c = raw[j:j + 1]
+            if c == b"\\":
+                j += 2
+                continue
+            if c == b"(":
+                depth += 1
+            elif c == b")":
+                depth -= 1
+                if depth == 0:
+                    j += 1
+                    break
+            j += 1
+        else:
+            return
+        spans.append((i, j))
+        i = j
+
+    while i < len(raw) and raw[i:i + 1] in b" \r\n\t":
+        i += 1
+    if raw[i:i + 1] != b"]":
+        return
+
+    canonical = b"/ID [(" + b"0" * 16 + b") (" + b"0" * 16 + b")]"
+    pinned = raw[:start] + canonical + raw[i + 1:]
+    if pinned != raw:
+        pdf.write_bytes(pinned)
+
+
 def bot_facts(bot_dir):
     """Everything a guide page states about one bot, parsed once.
 
@@ -804,6 +870,8 @@ def main():
         bundle = OUT / "all-bots.pdf"
         bundle.unlink(missing_ok=True)
         subprocess.run(["pdfunite", *[str(p) for p in made], str(bundle)], check=True)
+        pin_pdf_dates(bundle)
+        pin_pdf_id(bundle)
         print(f"bundle: {bundle.relative_to(ROOT)} ({len(made)} pages)")
 
         # The same parse, as data. kesslernity.com builds its /cowork-bots page from this
