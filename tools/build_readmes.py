@@ -99,16 +99,20 @@ def pack_readme(pack, bots):
     out.append(f"{len(bots)} bots. Generated from the skills on disk by `tools/build_readmes.py`; "
                f"do not edit by hand.")
     out.append("")
-    out.append("| Bot | What it owns |")
-    out.append("|---|---|")
+    out.append("| Bot | What it owns | Guide |")
+    out.append("|---|---|---|")
     for bot in sorted(bots, key=lambda b: b["slug"]):
-        out.append(f"| [`{bot['slug']}`]({bot['slug']}/) | {first_sentence(bot['desc'])} |")
+        guide = f"[PDF](../../guides/{bot['slug']}.pdf)"
+        out.append(f"| [`{bot['slug']}`]({bot['slug']}/) | {first_sentence(bot['desc'])} | {guide} |")
     out.append("")
     out.append("## Installing this pack")
     out.append("")
     out.append(f"Each bot is a separate archive. Download the ones you want from `dist/`, then in "
                f"Cowork: **Customize** → **Skills** → the arrow next to **Add** → **Upload "
                f"skill**. Cowork validates each file and writes it to your OneDrive.")
+    out.append("")
+    out.append(f"The **Guide** column is a one-page PDF written for someone who has never used "
+               f"Cowork. Send it with the archive and they will not need to ask you anything.")
     out.append("")
     out.append(f"This pack costs **{len(bots)} of your 50 custom skills**. Scheduling is optional "
                f"on every bot; each schedule you create costs one of your 25.")

@@ -42,6 +42,18 @@ projects live. One skill serves many people because that file differs.
 
 Full detail, including the manual OneDrive route: [docs/install.md](docs/install.md).
 
+## Sending one to a colleague
+
+[`guides/`](guides/) holds a one-page PDF for every bot, written for someone who has never
+heard of Cowork: what it is, what this bot does, the five steps to install it, and what it will
+never do without asking. Start with
+[`00-start-here.pdf`](guides/00-start-here.pdf), or send
+[`all-bots.pdf`](guides/all-bots.pdf) for the lot.
+
+They are generated from the `SKILL.md` files, so they cannot quietly drift from the skills they
+describe. How that works, and the two blocks that are written by hand instead:
+[guides/README.md](guides/README.md).
+
 ## The budget nobody mentions
 
 You can hold **50 custom skills** but only **25 scheduled prompts**. Skills are cheap, schedules
@@ -126,10 +138,11 @@ decide. Those records live in systems Cowork cannot reach, and that is the corre
 |---|---|
 | `packs/<pack>/<bot>/` | The bot: card, skill, prompts, examples, tests |
 | `dist/` | Upload-ready archives, one per bot |
+| `guides/` | A shareable one-page PDF per bot, plus a cover page and a bundle |
 | `docs/` | Conversion guide, portability verdicts, governance, install, writing your own |
 | `research/` | The verified facts behind every claim, with sources and access dates |
 | `templates/bot-template/` | Copy-me skeleton |
-| `tools/` | `lint_skills.py` validates and builds; `build_readmes.py` generates this table |
+| `tools/` | `lint_skills.py` validates and builds; `build_readmes.py` generates this table; `build_guides.py` renders the PDFs |
 
 Contributions and corrections welcome. If something here contradicts Microsoft's documentation,
 the documentation wins: open an issue and it gets fixed.

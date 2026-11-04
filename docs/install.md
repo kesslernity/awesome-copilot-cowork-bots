@@ -1,5 +1,10 @@
 # Installing a bot
 
+Installing it for somebody else? Send them the bot's one-page PDF from
+[`../guides/`](../guides/) instead of this file. It carries these same five steps, plus what
+Cowork is and what the bot will never do without asking, written for someone who has not read
+any of this.
+
 ## The short way, about two minutes
 
 1. Download the bot's `.zip` from [`../dist/`](../dist/).

@@ -1,4 +1,8 @@
-dist/
+# dist/ is NOT ignored. The README and every guide tell a reader to download an archive from
+# it, so it has to exist on GitHub. lint_skills.py pins the zip timestamps to 1980-01-01 so a
+# rebuild is byte-identical and committing them does not churn the history.
+.guide-build/
+__pycache__/
 .DS_Store
 .claude-flow/
 .swarm/
