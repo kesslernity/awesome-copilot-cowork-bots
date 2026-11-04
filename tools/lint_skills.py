@@ -125,9 +125,14 @@ def lint_skill(skill_dir, bot_dir):
 
     # The repo's own rules, not Microsoft's. A bot that can send without saying so is the one
     # defect that costs a reader something real.
+    # Widened after a false positive: calendar-defender says "never accept, decline, move" and
+    # "proposal" throughout and never uses the word draft. A check that cries wolf on a correct
+    # skill is a check people learn to ignore, which is worse than not having it.
     low = body.lower()
-    if not any(w in low for w in ("approval", "draft", "never send", "do not send")):
-        warnings.append(f"{name}: instructions never mention drafting or approval")
+    SAFE = ("approval", "approve", "draft", "never send", "do not send", "propose", "proposal",
+            "never act", "read only")
+    if not any(w in low for w in SAFE):
+        warnings.append(f"{name}: instructions never state a draft, propose or approval boundary")
 
     return errors, warnings
 

@@ -72,7 +72,7 @@ Skills, Add, Upload skill, and Microsoft validates it and saves it to OneDrive. 
 a folder tree by hand. This is why the catalogue ships archives, not instructions.
 
 **The approval model is richer.** Grok has Auto Review, a model judging risk, which its own docs
-admit "does not review every side effect". Cowork's gate is mechanical: an action button, an
+admit does not catch every side effect. Cowork's gate is mechanical: an action button, an
 approve-and-skip-similar option scoped to a recipient or a domain, approve-all, or cancel, and a
 Permissions panel listing every standing approval. Mechanical beats judgment for an auditor.
 
