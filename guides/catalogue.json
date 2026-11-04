@@ -1,0 +1,629 @@
+{
+  "repo": "https://github.com/kesslernity/awesome-copilot-cowork-bots",
+  "generatedBy": "tools/build_guides.py",
+  "coverUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/00-start-here.pdf",
+  "bundleUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/all-bots.pdf",
+  "bots": [
+    {
+      "slug": "brand-answer-monitor",
+      "title": "Brand Answer Monitor",
+      "job": "Tracks what a researcher finds when they look you up, week over week.",
+      "pack": "comms",
+      "packLabel": "Comms",
+      "description": "Tracks how the open web describes the brand on the questions that matter, and builds a weekly trend sheet of what a research tool finds when it looks the brand up. Use when the user asks how the brand is being described, what sources say about the company, to track brand visibility, or to see whether published positioning is being picked up.",
+      "principle": "A flat week is normal.",
+      "triggers": [
+        "What does the web say about us?",
+        "How are we showing up in AI answers?",
+        "Run this week’s brand check"
+      ],
+      "outputs": [
+        "A spreadsheet row per question, tracked week by week",
+        "What moved since last week, and the four-week direction",
+        "New sources quoting you for the first time"
+      ],
+      "never": [
+        "Never claim to measure any named assistant’s answers. The card and this file both say so.",
+        "Never act on the findings: no content is published, no page is edited, nothing is sent.",
+        "Never record a competitor’s non-public information."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/brand-answer-monitor.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/brand-answer-monitor.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/comms/brand-answer-monitor/"
+    },
+    {
+      "slug": "competition-monitor",
+      "title": "Competition Monitor",
+      "job": "Reports a material change and nothing else. The suppression is the product.",
+      "pack": "comms",
+      "packLabel": "Comms",
+      "description": "Watches a named list of competitors and reports only when something materially changed, staying silent when nothing did. Use when the user asks what competitors have changed, to monitor competitor pricing or positioning, or to set up a competitive watch.",
+      "principle": "Silence is the success state and the most common one.",
+      "triggers": [
+        "Anything new from our competitors?",
+        "Check the competitor list",
+        "Did anyone launch something?"
+      ],
+      "outputs": [
+        "A before-and-after table of what actually changed",
+        "One line on why each change matters",
+        "When nothing changed, one line saying so, and nothing else"
+      ],
+      "never": [
+        "Never access anything behind a login, a paywall or a trial. Public pages only.",
+        "Never report a competitor’s non-public information even if a source offers it.",
+        "Never characterise a competitor’s intent or finances. Report the observed attribute."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/competition-monitor.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/competition-monitor.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/comms/competition-monitor/"
+    },
+    {
+      "slug": "internal-newsletter-builder",
+      "title": "Internal Newsletter Builder",
+      "job": "Builds the round-up from what actually happened, and leaves a section out rather than filling it.",
+      "pack": "comms",
+      "packLabel": "Comms",
+      "description": "Builds a dated internal newsletter draft from the period's real material, every item sourced to the thing it describes, with nothing invented to fill a section. Use when the user asks to draft the internal newsletter, build the team update, prepare the monthly round-up, or says the newsletter is due.",
+      "principle": "A thin month produces a thin newsletter.",
+      "triggers": [
+        "Draft this month’s team newsletter",
+        "What should go in the round-up?",
+        "Build the internal update"
+      ],
+      "outputs": [
+        "A Word document in your usual section order",
+        "Every item carrying the link it came from",
+        "Empty sections left out rather than padded"
+      ],
+      "never": [
+        "Never send or publish. Draft to the user.",
+        "Never include anything on the config exclusion list: individual performance, anything about compensation, unannounced departures…",
+        "Never announce something not already announced elsewhere. A newsletter is not the channel for breaking news to a team."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/internal-newsletter-builder.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/internal-newsletter-builder.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/comms/internal-newsletter-builder/"
+    },
+    {
+      "slug": "leadership-update-drafter",
+      "title": "Leadership Update Drafter",
+      "job": "Writes the upward update in a fixed shape, with the uncomfortable parts kept in.",
+      "pack": "comms",
+      "packLabel": "Comms",
+      "description": "Drafts a leadership update in a fixed structure from the period's evidence, keeping facts and inferences visibly separate and stating what is not known. Use when the user asks to draft a leadership update, prepare a status note for the executive, write the weekly update to the sponsor, or says an update is due upward.",
+      "principle": "“Nothing changed this week” is a legitimate update.",
+      "triggers": [
+        "Draft my update for leadership",
+        "Write up my monthly report",
+        "Prepare my steering committee update"
+      ],
+      "outputs": [
+        "Where we are, what changed, what is at risk, what I need from you",
+        "A short list of what is still not known",
+        "Facts and opinions kept visibly apart"
+      ],
+      "never": [
+        "Never send. Draft to the user, always.",
+        "Never soften or omit anything crossing the escalation bar.",
+        "Never attribute a slip or a problem to a named individual."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/leadership-update-drafter.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/leadership-update-drafter.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/comms/leadership-update-drafter/"
+    },
+    {
+      "slug": "calendar-defender",
+      "title": "Calendar Defender",
+      "job": "Finds the week’s conflicts and the meetings that should not exist, and proposes, never acts.",
+      "pack": "core-executive",
+      "packLabel": "Core / Executive",
+      "description": "Reviews the week ahead for double-bookings, meetings with no agenda or no decision to make, and lost focus time, then proposes specific changes without making any of them. Use when the user asks to review their calendar, find conflicts, protect focus time, says their week is overbooked, or wants to clean up next week.",
+      "principle": "A clean week needs one line.",
+      "triggers": [
+        "Check my week for conflicts",
+        "Which meetings can I drop?",
+        "Do I have any focus time left?"
+      ],
+      "outputs": [
+        "Your clashes, named meeting by meeting",
+        "Meetings with no stated purpose and no decision to make",
+        "Focus time against your target, and the exact changes to make"
+      ],
+      "never": [
+        "Never accept, decline, move, shorten, cancel or create anything. Every output is a proposal for the user.",
+        "Never touch anything on the config never-touch list.",
+        "Never characterise a colleague’s meeting as a waste of time. Report the absence of an agenda as a fact and let the user decide."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/calendar-defender.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/calendar-defender.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/core-executive/calendar-defender/"
+    },
+    {
+      "slug": "budget-variance-explainer",
+      "title": "Budget Variance Explainer",
+      "job": "Writes the story behind a number somebody else owns.",
+      "pack": "finance-finops",
+      "packLabel": "Finance & FinOps",
+      "description": "Drafts the narrative behind a budget variance from the context the user supplies and the discussion in mail and meetings, never producing or changing the figure itself. Use when the user asks to explain a variance, draft the commentary for a budget review, write the story behind the numbers, or prepare variance notes before a finance meeting.",
+      "principle": "“Largely unexplained” is an honest and useful answer.",
+      "triggers": [
+        "Why are we over budget?",
+        "Explain this variance",
+        "What is behind the overspend?"
+      ],
+      "outputs": [
+        "Written commentary in your house structure",
+        "A table of causes, with evidence and how much each explains",
+        "The remainder that stays unexplained, stated plainly"
+      ],
+      "never": [
+        "Never calculate, recalculate or forecast. Not even arithmetic on supplied figures.",
+        "Never state a cause as certain when the evidence is circumstantial. Label it.",
+        "Never write commentary that attributes a variance to a named individual."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/budget-variance-explainer.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/budget-variance-explainer.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/finance-finops/budget-variance-explainer/"
+    },
+    {
+      "slug": "cloud-cost-digest",
+      "title": "Cloud Cost Digest",
+      "job": "Explains what moved on the bill, with the question to ask each owner.",
+      "pack": "finance-finops",
+      "packLabel": "Finance & FinOps",
+      "description": "Turns cloud billing exports and provider alert emails into a short digest of what moved, what is anomalous and what to ask an owner about. Use when the user asks about cloud spend, what changed on the bill, why costs went up, to prepare a FinOps review, or to explain a cost spike.",
+      "principle": "A flat month is a result.",
+      "triggers": [
+        "What moved on the cloud bill?",
+        "Explain this month’s cloud spend",
+        "Anything odd in the billing export?"
+      ],
+      "outputs": [
+        "The total for the period against the one before",
+        "The three biggest movements, with the owner to ask",
+        "Anomalies no explanation could be found for"
+      ],
+      "never": [
+        "Never state a forecast as a commitment.",
+        "Never recommend terminating, resizing or deleting a resource. Surface the movement and the question; the owner decides.",
+        "The provider’s own billing console is the source of truth. This reads an export."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/cloud-cost-digest.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/cloud-cost-digest.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/finance-finops/cloud-cost-digest/"
+    },
+    {
+      "slug": "expense-reconciliation",
+      "title": "Expense Reconciliation",
+      "job": "Finds the gap between what was claimed and what was evidenced, before someone else does.",
+      "pack": "finance-finops",
+      "packLabel": "Finance & FinOps",
+      "description": "Reconciles submitted expense claims against the receipts and statements sitting in the mailbox, lists what is missing or unmatched, and drafts the chaser to each claimant. Use when the user asks to reconcile expenses, check expense claims, find missing receipts, chase expense documentation, or prepare the expense pack before a close.",
+      "principle": "A clean reconciliation is the best outcome.",
+      "triggers": [
+        "Check my claims against the receipts",
+        "What receipts am I missing?",
+        "Reconcile last month’s expenses"
+      ],
+      "outputs": [
+        "Every claim matched to its receipt, or flagged",
+        "Counts by status, and the total value unmatched",
+        "A drafted chaser for each person to chase"
+      ],
+      "never": [
+        "Draft, never send. Chasers are drafts.",
+        "Never approve, reject or adjust a claim. Never state a reimbursable amount as final.",
+        "The expense system and the finance ledger are the source of truth. This reads mail."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/expense-reconciliation.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/expense-reconciliation.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/finance-finops/expense-reconciliation/"
+    },
+    {
+      "slug": "invoice-vendor-followup",
+      "title": "Invoice & Vendor Follow-up",
+      "job": "Finds the invoice threads that stopped, with age and amount, and drafts the nudge.",
+      "pack": "finance-finops",
+      "packLabel": "Finance & FinOps",
+      "description": "Finds invoice and payment threads in the mailbox that have gone unanswered, ages them, and drafts the follow-up to each counterparty. Use when the user asks what invoices are outstanding, which vendors have not replied, to chase payment or payment queries, or to prepare the aged follow-up list before a finance review.",
+      "principle": "Nothing outstanding is a good week.",
+      "triggers": [
+        "Which invoices have gone quiet?",
+        "Who has not replied about payment?",
+        "Draft the chasers for unpaid invoices"
+      ],
+      "outputs": [
+        "Every stalled thread, with its age and amount",
+        "Who you are waiting on, and who is waiting on you",
+        "A drafted nudge for each one, unsent"
+      ],
+      "never": [
+        "Draft, never send. Especially never send a chase to a counterparty on the config exclusion list…",
+        "Never state an amount as owed. The ledger is the source of truth.",
+        "Never escalate a ladder step on your own. The user chooses the step."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/invoice-vendor-followup.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/invoice-vendor-followup.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/finance-finops/invoice-vendor-followup/"
+    },
+    {
+      "slug": "subscription-hunter",
+      "title": "Subscription Hunter",
+      "job": "Surfaces every recurring charge in the mailbox before it renews itself, with a drafted reply ready.",
+      "pack": "finance-finops",
+      "packLabel": "Finance & FinOps",
+      "description": "Finds every recurring subscription, licence and service renewal hiding in the user's mailbox and files, and builds a dated renewal calendar with a drafted cancellation or renegotiation reply for each one. Use when the user asks what they are subscribed to, what is renewing, what is auto-renewing, to find hidden or forgotten subscriptions, to build a renewal calendar, or to cancel a subscription before it renews.",
+      "principle": "Finding nothing is a success.",
+      "triggers": [
+        "What are we subscribed to?",
+        "What renews in the next 30 days?",
+        "Find the subscriptions we forgot"
+      ],
+      "outputs": [
+        "An Excel sheet of every renewal, each row linked to its source",
+        "What renews in the next 30 days, and what looks like waste",
+        "A drafted cancellation or renegotiation, unsent"
+      ],
+      "never": [
+        "Draft, never send. Cancellation and renegotiation replies are saved as drafts for the user to read, edit and send.",
+        "Never cancel, downgrade or modify anything in a vendor portal, and never follow a cancellation link.",
+        "Never state an amount as the authoritative figure. Finance systems and the contract are the source of truth; this reads what arrived in the mailbox."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/subscription-hunter.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/subscription-hunter.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/finance-finops/subscription-hunter/"
+    },
+    {
+      "slug": "change-advisory-prep",
+      "title": "Change Advisory Board Prep",
+      "job": "Builds the pack from what people actually wrote, and names every change that arrived without a.",
+      "pack": "it-ops",
+      "packLabel": "IT & Ops",
+      "description": "Assembles the pack for the next change advisory board from the change requests, threads and documents already circulating, with the risk and rollback position for each change stated or marked missing. Use when the user asks to prepare for CAB, build the change board pack, review upcoming changes, or says a change board is coming up.",
+      "principle": "A board with nothing to review is fine.",
+      "triggers": [
+        "Prepare the pack for the next CAB",
+        "What changes are up for review?",
+        "Which changes have no rollback plan?"
+      ],
+      "outputs": [
+        "The board pack: change, owner, window, risk, rollback",
+        "Which changes arrived with fields missing",
+        "Prior incidents on the same systems"
+      ],
+      "never": [
+        "Never approve, reject or schedule a change. The board decides.",
+        "Never write a rollback plan. Report its absence.",
+        "Never state a risk rating of your own. Report the proposer’s and say it is theirs."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/change-advisory-prep.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/change-advisory-prep.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/it-ops/change-advisory-prep/"
+    },
+    {
+      "slug": "defect-intake-triage",
+      "title": "Defect Intake and Triage",
+      "job": "Turns “it’s broken” into something an engineer can act on, or says exactly what is still missing.",
+      "pack": "it-ops",
+      "packLabel": "IT & Ops",
+      "description": "Turns a reported problem in mail or Teams into a structured, ticket-ready intake with the evidence attached and the gaps named, then an Adaptive Card for approval before anything is filed. Use when the user asks to triage a bug report, turn a complaint into a ticket, prepare a defect for filing, or says a user reported a problem.",
+      "principle": "A triage that concludes “not enough information, here are the three questions” is a success.",
+      "triggers": [
+        "Turn this bug report into a ticket",
+        "Is there enough here to raise a defect?",
+        "Triage what came in"
+      ],
+      "outputs": [
+        "A card turning the report into a ticket draft",
+        "The exact fields still missing, written as questions",
+        "Possible duplicates, linked"
+      ],
+      "never": [
+        "Never file, create, assign or comment on a ticket without approval. Filing requires a work tracker plugin and the user’s explicit go.",
+        "Never attempt reproduction. No terminal, no staging, no browser steps.",
+        "Never declare a duplicate, a root cause or a severity the config does not support."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/defect-intake-triage.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/defect-intake-triage.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/it-ops/defect-intake-triage/"
+    },
+    {
+      "slug": "incident-digest",
+      "title": "Incident Digest",
+      "job": "Rebuilds what happened and when, from the traffic, so the review starts from a timeline instead of.",
+      "pack": "it-ops",
+      "packLabel": "IT & Ops",
+      "description": "Turns the mail and Teams traffic around an incident into a dated timeline with the open questions and who owns each. Use when the user asks for an incident timeline, what happened during an outage, to prepare a post-incident review, or to catch up on an incident in progress.",
+      "principle": "No blame, ever.",
+      "triggers": [
+        "Build the timeline for this incident",
+        "What happened, and when?",
+        "Prepare the incident review"
+      ],
+      "outputs": [
+        "A dated timeline of what happened",
+        "What was observed, what was believed, what is known",
+        "Open questions, each with an owner"
+      ],
+      "never": [
+        "Never post to a channel, never reply to a thread, never update a status page.",
+        "Never assign an action. List open questions with suggested owners for a human to assign.",
+        "Never state a root cause. Surface what the traffic says and label it belief or finding."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/incident-digest.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/incident-digest.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/it-ops/incident-digest/"
+    },
+    {
+      "slug": "internal-expert-finder",
+      "title": "Internal Expert Finder",
+      "job": "Answers “who here has already solved this”, with the evidence, before anyone reinvents it.",
+      "pack": "people-hr",
+      "packLabel": "People & HR",
+      "description": "Finds who inside the organisation has already done a given kind of work, with the evidence for each name, and drafts the introduction. Strictly internal, never external sourcing. Use when the user asks who has done this before, who knows about a topic, who to ask internally, or who worked on a similar project.",
+      "principle": "Finding nobody is a real and useful answer.",
+      "triggers": [
+        "Who here has done this before?",
+        "Find someone who knows this system",
+        "Who should I ask about this?"
+      ],
+      "outputs": [
+        "A shortlist of people, with the evidence for each",
+        "Who to ask first, and who to ask if they are away",
+        "Where it looked, so you can see what it missed"
+      ],
+      "never": [
+        "Never external. No sourcing, no candidates, no professional networks, no recruitment use.",
+        "Never infer expertise from a job title, a team name or a reporting line.",
+        "Never surface a document the user cannot already access. Enterprise Search respects permissions and this skill must not try to work around that."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/internal-expert-finder.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/internal-expert-finder.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/people-hr/internal-expert-finder/"
+    },
+    {
+      "slug": "interview-loop-coordinator",
+      "title": "Interview Loop Coordinator",
+      "job": "Makes a panel cover the whole bar once, instead of four people asking the same question.",
+      "pack": "people-hr",
+      "packLabel": "People & HR",
+      "description": "Prepares an interview loop: who covers which competency, what each interviewer needs beforehand, and a consolidated feedback pack afterwards scored against a written bar. Use when the user asks to plan an interview loop, prepare a panel, build a debrief pack, or says they are interviewing for a role.",
+      "principle": "The pack never produces a hire recommendation.",
+      "triggers": [
+        "Set up the panel for this role",
+        "Who covers what in the loop?",
+        "Pull the interview feedback together"
+      ],
+      "outputs": [
+        "Who covers which competency, and what nobody covers",
+        "What each interviewer needs beforehand",
+        "Afterwards, the evidence, with disagreements shown"
+      ],
+      "never": [
+        "Never recommend hire or no-hire, never rank candidates, never produce an overall score.",
+        "Never create or send calendar invitations. Propose.",
+        "Never include anything about a candidate not supplied for this process, and never search for a candidate externally."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/interview-loop-coordinator.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/interview-loop-coordinator.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/people-hr/interview-loop-coordinator/"
+    },
+    {
+      "slug": "onboarding-buddy",
+      "title": "Onboarding Buddy",
+      "job": "Turns “they start Monday” into a dated plan built from what the team actually has.",
+      "pack": "people-hr",
+      "packLabel": "People & HR",
+      "description": "Builds a dated first-fortnight plan for a new joiner from the team's own documents, meetings and systems, naming who they meet and what they read on which day. Use when the user asks to plan an onboarding, prepare for a new starter, build a first-week plan, or says someone is joining the team.",
+      "principle": "A short plan with real links beats a full one with placeholders.",
+      "triggers": [
+        "Plan the first two weeks for our joiner",
+        "Who should they meet in week one?",
+        "What should they read before Monday?"
+      ],
+      "outputs": [
+        "A day-by-day plan for the first fortnight",
+        "Who they meet, and why that person",
+        "What exists for them to read, and what is missing"
+      ],
+      "never": [
+        "Never create calendar events or send invitations. Propose holds for approval.",
+        "Never include anything about the joiner’s compensation, background or personal details.",
+        "Never surface documents the joiner will not have permission to open once they start: note them as access needed instead."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/onboarding-buddy.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/onboarding-buddy.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/people-hr/onboarding-buddy/"
+    },
+    {
+      "slug": "document-transmittal-tracker",
+      "title": "Document Transmittal Tracker",
+      "job": "Answers “what did we send, and who still owes us a response”, from the mail itself.",
+      "pack": "projects",
+      "packLabel": "Projects",
+      "description": "Tracks documents issued to clients, contractors and authorities: what was sent, to whom, on what date, what response was due and what is now overdue for return. Use when the user asks what has been transmitted, what is outstanding for comment or approval, to build a transmittal register, or which documents are overdue for return.",
+      "principle": "Nothing overdue is the goal, not a failure of the skill.",
+      "triggers": [
+        "What did we send the client?",
+        "Who still owes us a response?",
+        "What transmittals are overdue?"
+      ],
+      "outputs": [
+        "What was issued, to whom, and on what date",
+        "What is overdue, grouped by party",
+        "Revisions that quietly superseded an open item"
+      ],
+      "never": [
+        "Never issue, reissue or transmit a document.",
+        "Never chase a party directly. Drafts go to the user.",
+        "Never mark anything as approved. Approval is a recorded act in the project’s own system."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/document-transmittal-tracker.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/document-transmittal-tracker.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/projects/document-transmittal-tracker/"
+    },
+    {
+      "slug": "lessons-learned-harvester",
+      "title": "Lessons Learned Harvester",
+      "job": "Finds the lesson that has now been learned four times, which is the only kind worth acting on.",
+      "pack": "projects",
+      "packLabel": "Projects",
+      "description": "Pulls recurring problems out of close-out reports, retrospectives and project correspondence into a themed register showing which lesson keeps repeating across projects. Use when the user asks for lessons learned, what keeps going wrong, to prepare a close-out, or whether a problem has happened before.",
+      "principle": "One project’s lessons are not a register.",
+      "triggers": [
+        "What keeps going wrong across projects?",
+        "Pull the lessons from the close-outs",
+        "What have we learned more than once?"
+      ],
+      "outputs": [
+        "Themes, and how many separate projects hit each one",
+        "The lessons recurring across three projects or more",
+        "Where the same recommendation keeps being made"
+      ],
+      "never": [
+        "Never attribute a lesson to a named individual. Lessons attach to projects and processes.",
+        "Never state a cause the source material does not state.",
+        "Never rewrite a recommendation into something stronger than what was written."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/lessons-learned-harvester.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/lessons-learned-harvester.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/projects/lessons-learned-harvester/"
+    },
+    {
+      "slug": "rfi-query-tracker",
+      "title": "RFI and Query Tracker",
+      "job": "Shows which open questions are actually blocking work, rather than which are merely old.",
+      "pack": "projects",
+      "packLabel": "Projects",
+      "description": "Tracks open requests for information and technical queries: who asked, who owes the answer, how long it has been open and what it is holding up. Use when the user asks what RFIs are open, which queries are unanswered, what is blocked waiting on an answer, or to prepare the RFI log before a progress meeting.",
+      "principle": "An empty log is a good day on a project.",
+      "triggers": [
+        "Which RFIs are still open?",
+        "What is blocking work right now?",
+        "Who owes us an answer?"
+      ],
+      "outputs": [
+        "Every open question, with who owes the answer",
+        "Which ones are actually blocking work",
+        "Overdue items with no stated impact"
+      ],
+      "never": [
+        "Never answer a query on anyone’s behalf, and never draft a technical answer. This tracks; it does not opine on design, method or compliance.",
+        "Never chase externally. Drafts go to the user.",
+        "Never infer what a query blocks."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/rfi-query-tracker.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/rfi-query-tracker.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/projects/rfi-query-tracker/"
+    },
+    {
+      "slug": "account-expert",
+      "title": "Account Expert",
+      "job": "One skill, one customer, context rebuilt from the tenant rather than from a CRM.",
+      "pack": "sales-bd",
+      "packLabel": "Sales & BD",
+      "description": "Owns the context for one named customer, rebuilding what is happening with them from mail, meetings and files, and producing a pre-meeting brief or a state-of-the-account summary on request. Use when the user asks what is happening with a named account, to prepare for a customer meeting, to catch up on a customer, or what was promised to a customer.",
+      "principle": "A quiet account is a finding.",
+      "triggers": [
+        "Brief me before the customer meeting",
+        "What is happening with this account?",
+        "Catch me up on them"
+      ],
+      "outputs": [
+        "What changed on the account since last time",
+        "Open commitments, both yours and theirs",
+        "Who went quiet, and the questions still open"
+      ],
+      "never": [
+        "Never contact the customer. Drafts only, and only when asked.",
+        "Never produce a health score, a risk rating or a close probability.",
+        "Never share internal commentary about the account externally, and never include internal pricing discussion in anything drafted to the customer."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/account-expert.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/account-expert.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/sales-bd/account-expert/"
+    },
+    {
+      "slug": "one-to-one-prep",
+      "title": "One-to-One Prep",
+      "job": "Walks into the 1:1 knowing what you owe them, which is the half most prep skips.",
+      "pack": "team-lead",
+      "packLabel": "Team Lead",
+      "description": "Prepares a brief for a one-to-one with a named person: their open items, what they raised recently, what you owe them, and what has gone unanswered between you. Use when the user asks to prepare for a 1:1, what to discuss with someone, what they owe a colleague, or says they have a one-to-one coming up.",
+      "principle": "An empty brief is a good sign.",
+      "triggers": [
+        "Prep my 1:1 with Sam",
+        "What do I owe them?",
+        "What did they raise last time?"
+      ],
+      "outputs": [
+        "What they raised, quoted and linked",
+        "What you owe them, and what is still unanswered",
+        "Items carried over from last time, marked and counted"
+      ],
+      "never": [
+        "Never assess, rate, or characterise the person. No performance language, no sentiment read, no “seems disengaged”.",
+        "Never read 1:1 notes about this person written by someone else.",
+        "Never draft feedback, and never prepare anything for a performance process."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/one-to-one-prep.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/one-to-one-prep.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/team-lead/one-to-one-prep/"
+    },
+    {
+      "slug": "project-decomposer",
+      "title": "Project Decomposer",
+      "job": "Turns a project into tasks somebody can actually finish, each with a stated way to tell it is done.",
+      "pack": "team-lead",
+      "packLabel": "Team Lead",
+      "description": "Breaks a project, initiative or goal into owned tasks, each carrying its own verification criteria and a named owner, and returns one Adaptive Card per task. It plans and does not execute. Use when the user asks to break down a project, decompose an initiative, turn a goal into tasks, work out who does what, or says a project is too big to start.",
+      "principle": "Returning fewer tasks is usually better.",
+      "triggers": [
+        "Break this project into tasks",
+        "Who owns what on this?",
+        "Turn this goal into a plan"
+      ],
+      "outputs": [
+        "A card per task, each with a named owner",
+        "How you will know each task is actually finished",
+        "The whole set saved to a file, so it survives the chat"
+      ],
+      "never": [
+        "Plans only. Never create tasks in Planner or To Do, never send anything, never book time.",
+        "Never assign a named person who has not already been associated with this work in the evidence.",
+        "Never state a date as agreed unless the evidence shows it was agreed."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/project-decomposer.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/project-decomposer.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/team-lead/project-decomposer/"
+    },
+    {
+      "slug": "team-lead-mode",
+      "title": "Team Lead Mode",
+      "job": "Runs the pack in order and assembles one review, rather than making you run four things.",
+      "pack": "team-lead",
+      "packLabel": "Team Lead",
+      "description": "The orchestrator for a team lead's week. Runs the other team-lead skills in a stated order inside one task and assembles their outputs into a single review, degrading gracefully when a skill is not installed. Use when the user asks for their weekly team review, to run the team lead routine, says it is Monday planning, or wants everything in one place.",
+      "principle": "A quiet week produces a short review.",
+      "triggers": [
+        "Set me up for the week",
+        "Run my team lead review",
+        "Prepare everything for Monday"
+      ],
+      "outputs": [
+        "One document: the three things that need you this week",
+        "A section per report and per workstream, plus your calendar",
+        "A run report saying which parts worked and which failed"
+      ],
+      "never": [
+        "Inherits every boundary of the skills it calls, and may not relax any of them.",
+        "Never send, post, create or schedule anything. It assembles.",
+        "Never fill a degraded section with its own analysis. Degraded means thinner, not invented."
+      ],
+      "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/team-lead-mode.zip",
+      "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/team-lead-mode.pdf",
+      "repoUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/tree/main/packs/team-lead/team-lead-mode/"
+    }
+  ]
+}

@@ -17,8 +17,11 @@ most vendor material leaves out.
 """
 import argparse
 import html
+import json
+import os
 import pathlib
 import re
+import shutil
 import subprocess
 import sys
 
@@ -29,6 +32,9 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 PACKS = ROOT / "packs"
 OUT = ROOT / "guides"
 BUILD = ROOT / ".guide-build"
+# Per-run Chrome profile: a shared one makes two concurrent builds fight over its lock,
+# and the loser dies mid-render looking like a bug in whichever page it was on.
+PROFILE = BUILD / f"chrome-{os.getpid()}"
 
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
@@ -295,7 +301,13 @@ would otherwise forget.</div>
 </body></html>"""
 
 
-def build_html(bot_dir):
+def bot_facts(bot_dir):
+    """Everything a guide page states about one bot, parsed once.
+
+    The PDF and guides/catalogue.json both come from this, so the site cannot describe a bot
+    differently from the bot's own one-pager. Adding a second parser on the website side is
+    exactly how two surfaces start disagreeing about the same artifact.
+    """
     pack = bot_dir.parent.name
     text = (bot_dir / "skill" / "SKILL.md").read_text(encoding="utf-8")
     fm, body = front_matter(text)
@@ -322,23 +334,40 @@ def build_html(bot_dir):
                 f"No {label} for '{bot_dir.name}'. Add them to tools/guide_copy.py.\n"
                 "They are written, not derived: see that file's docstring for why."
             )
-    quotes = TRIGGERS[bot_dir.name]
-    out_items = OUTPUTS[bot_dir.name]
     never = bullets(section(body, "Boundaries"))
     if not never:
         sys.exit(f"{bot_dir.name}: no bullets under '## Boundaries'.")
 
+    return {
+        "slug": bot_dir.name,
+        "title": title,
+        "job": curly(job),
+        "pack": pack,
+        "packLabel": PACK_TITLES.get(pack, pack),
+        "description": plain(fm.get("description", "")),
+        "principle": curly(principle),
+        "triggers": [curly(q) for q in TRIGGERS[bot_dir.name]],
+        "outputs": [curly(t) for t in OUTPUTS[bot_dir.name]],
+        "never": [curly(t) for t in never],
+        "zipUrl": f"{RAW}/dist/{bot_dir.name}.zip",
+        "guideUrl": f"{RAW}/guides/{bot_dir.name}.pdf",
+        "repoUrl": f"https://{REPO}/tree/main/packs/{pack}/{bot_dir.name}/",
+    }
+
+
+def build_html(bot_dir):
+    f = bot_facts(bot_dir)
     return PAGE.format(
         css=CSS,
-        pack=E(PACK_TITLES.get(pack, pack)),
-        title=E(title),
-        job=E(curly(job)),
-        zip_url=f"{RAW}/dist/{bot_dir.name}.zip",
-        zip_name=f"{bot_dir.name}.zip",
-        quotes="".join(f'<div class="q">“{E(curly(q))}”</div>' for q in quotes),
-        output="".join(f"<li>{E(curly(t))}</li>" for t in out_items),
-        never="".join(f"<li>{E(curly(t))}</li>" for t in never),
-        principle=E(curly(principle)),
+        pack=E(f["packLabel"]),
+        title=E(f["title"]),
+        job=E(f["job"]),
+        zip_url=f["zipUrl"],
+        zip_name=f"{f['slug']}.zip",
+        quotes="".join(f'<div class="q">“{E(q)}”</div>' for q in f["triggers"]),
+        output="".join(f"<li>{E(t)}</li>" for t in f["outputs"]),
+        never="".join(f"<li>{E(t)}</li>" for t in f["never"]),
+        principle=E(f["principle"]),
         repo=REPO,
     )
 
@@ -377,7 +406,7 @@ def check(bots):
         h.write_text(markup.replace("</body>", PROBE), encoding="utf-8")
         dom = subprocess.run(
             [CHROME, "--headless", "--disable-gpu", "--dump-dom", "--window-size=794,1123",
-             f"--user-data-dir={BUILD}/chrome", "--virtual-time-budget=3000", h.as_uri()],
+             f"--user-data-dir={PROFILE}", "--virtual-time-budget=3000", h.as_uri()],
             capture_output=True, text=True,
         ).stdout
         m = re.search(r"<title>GAP (-?[\d.]+)</title>", dom)
@@ -510,7 +539,7 @@ def main():
         pdf = OUT / f"{name}.pdf"
         subprocess.run(
             [CHROME, "--headless", "--disable-gpu", "--no-pdf-header-footer",
-             f"--print-to-pdf={pdf}", f"--user-data-dir={BUILD}/chrome",
+             f"--print-to-pdf={pdf}", f"--user-data-dir={PROFILE}",
              "--virtual-time-budget=4000", h.as_uri()],
             check=True, capture_output=True,
         )
@@ -524,6 +553,28 @@ def main():
         subprocess.run(["pdfunite", *[str(p) for p in made], str(bundle)], check=True)
         print(f"bundle: {bundle.relative_to(ROOT)} ({len(made)} pages)")
 
+        # The same parse, as data. kesslernity.com builds its /cowork-bots page from this
+        # rather than re-parsing SKILL.md in JavaScript, so the website and the PDF cannot
+        # end up describing the same bot differently.
+        cat = OUT / "catalogue.json"
+        cat.write_text(
+            json.dumps(
+                {
+                    "repo": f"https://{REPO}",
+                    "generatedBy": "tools/build_guides.py",
+                    "coverUrl": f"{RAW}/guides/00-start-here.pdf",
+                    "bundleUrl": f"{RAW}/guides/all-bots.pdf",
+                    "bots": [bot_facts(b) for b in bots],
+                },
+                indent=2,
+                ensure_ascii=False,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        print(f"data:   {cat.relative_to(ROOT)} ({len(bots)} bots)")
+
+    shutil.rmtree(PROFILE, ignore_errors=True)
     print(f"{len(made)} {'HTML files' if args.html else 'PDFs'} written to "
           f"{(BUILD if args.html else OUT).relative_to(ROOT)}/")
 
