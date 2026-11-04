@@ -1,6 +1,6 @@
 ---
 name: internal-expert-finder
-description: Finds who inside the organisation has already done a given kind of work, with the evidence for each name, and drafts the introduction. Strictly internal, never external sourcing. Use when the user asks who has done this before, who knows about a topic, who to ask internally, or who worked on a similar project.
+description: Finds who inside the organization has already done a given kind of work, with the evidence for each name, and drafts the introduction. Strictly internal, never external sourcing. Use when the user asks who has done this before, who knows about a topic, who to ask internally, or who worked on a similar project.
 ---
 
 # Internal Expert Finder
@@ -17,7 +17,7 @@ half of an external-sourcing pattern that does not belong inside a tenant.
 - `references/config.md` for the evidence bar and groups to exclude
 
 ## Procedure
-1. **Turn the request into search terms**, including the vocabulary the organisation actually
+1. **Turn the request into search terms**, including the vocabulary the organization actually
    uses, not only the user's phrasing. Say which terms you searched.
 2. **Find artifacts first, people second.** A person is a candidate because a document, a deck, a
    decision or a meeting ties them to the work. Never nominate someone from a job title alone.
@@ -45,14 +45,14 @@ not fall back to nominating senior people by title.
 ## When there is no data
 - Nothing found: report the terms searched so the user can add vocabulary.
 - Only indirect ties: say so plainly rather than promoting them to direct.
-- Evidence is all old: say the organisation's knowledge here may have left with people.
+- Evidence is all old: say the organization's knowledge here may have left with people.
 
 ## Boundaries
 - **Never external.** No sourcing, no candidates, no professional networks, no recruitment use.
 - Never infer expertise from a job title, a team name or a reporting line.
 - Never surface a document the user cannot already access. Enterprise Search respects permissions
   and this skill must not try to work around that.
-- Never characterise someone's performance or suitability. Report the tie and the evidence only.
+- Never characterize someone's performance or suitability. Report the tie and the evidence only.
 - Draft the introduction; do not send it.
 
 ## Self-check

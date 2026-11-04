@@ -28,7 +28,7 @@ is the right shape to carry it.
 1. **Ask the same questions every week, unchanged.** A question edited mid-series breaks the
    trend, so changed questions start a new series and the sheet says so.
 2. **For each question, record**: whether the brand appeared, in what position among named
-   organisations, which sources were cited, and the framing in one quoted phrase.
+   organizations, which sources were cited, and the framing in one quoted phrase.
 3. **Record competitor appearances** on the same questions, since relative presence is the signal.
 4. **Append to the trend sheet.** Never overwrite history.
 5. **Report only the deltas** against last week, plus a four-week direction per question.
@@ -55,7 +55,9 @@ and a monitor that finds drama weekly is measuring its own noise.
 - A question's wording had to change: start a new series, say so, do not splice.
 
 ## Boundaries
-- **Never claim to measure any named assistant's answers.** The card and this file both say so.
+- **Never claim to show what ChatGPT, Copilot or any other assistant answers.** This reports
+  what the open web says about the brand, through Deep Research. It cannot see inside
+  anyone else's assistant and must never imply that it can.
 - Never act on the findings: no content is published, no page is edited, nothing is sent.
 - Never record a competitor's non-public information.
 - **Draft only.**

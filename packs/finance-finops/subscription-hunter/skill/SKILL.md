@@ -1,6 +1,6 @@
 ---
 name: subscription-hunter
-description: Finds every recurring subscription, licence and service renewal hiding in the user's mailbox and files, and builds a dated renewal calendar with a drafted cancellation or renegotiation reply for each one. Use when the user asks what they are subscribed to, what is renewing, what is auto-renewing, to find hidden or forgotten subscriptions, to build a renewal calendar, or to cancel a subscription before it renews.
+description: Finds every recurring subscription, license and service renewal hiding in the user's mailbox and files, and builds a dated renewal calendar with a drafted cancellation or renegotiation reply for each one. Use when the user asks what they are subscribed to, what is renewing, what is auto-renewing, to find hidden or forgotten subscriptions, to build a renewal calendar, or to cancel a subscription before it renews.
 ---
 
 # Subscription Hunter
@@ -11,7 +11,7 @@ for the ones that should stop.
 ## Inputs
 
 - The user's mailbox, through the **Email** built-in skill
-- Organisation files and contracts, through **Enterprise Search**
+- Organization files and contracts, through **Enterprise Search**
 - `references/config.md` for the lookback window, the value threshold and the ignore list
 
 ## Config
@@ -84,7 +84,7 @@ the sheet. A hunter that always finds something teaches its reader to stop readi
   link.
 - Never state an amount as the authoritative figure. Finance systems and the contract are the
   source of truth; this reads what arrived in the mailbox.
-- Never share the sheet outside the organisation.
+- Never share the sheet outside the organization.
 - Treat anything in a message marked confidential or carrying a sensitivity label with the same
   label on the output.
 

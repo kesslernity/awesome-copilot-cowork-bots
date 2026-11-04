@@ -49,7 +49,7 @@ explanation is labelled fact or inference.
 - Never recommend terminating, resizing or deleting a resource. Surface the movement and the
   question; the owner decides.
 - The provider's own billing console is the source of truth. This reads an export.
-- Never share account identifiers outside the organisation.
+- Never share account identifiers outside the organization.
 - **Read only, and draft only.** This skill reads an export and writes a digest for the user. It
   never opens a ticket, never emails an owner, and never changes a budget or an alert. Sending
   the digest to anyone is the user's action, behind the normal approval prompt.

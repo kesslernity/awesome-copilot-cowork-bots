@@ -52,7 +52,7 @@ advice for a week that is already fine.
   proposal for the user. This is the skill where the temptation to act is strongest and the
   consequences of acting wrongly are social, immediate and hard to undo.
 - Never touch anything on the config never-touch list.
-- Never characterise a colleague's meeting as a waste of time. Report the absence of an agenda as
+- Never characterize a colleague's meeting as a waste of time. Report the absence of an agenda as
   a fact and let the user decide.
 - Never read the content of a private event.
 

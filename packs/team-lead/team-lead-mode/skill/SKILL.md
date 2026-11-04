@@ -64,7 +64,7 @@ weekly routine gets abandoned in month two.
 ## Boundaries
 
 - **Inherits every boundary of the skills it calls, and may not relax any of them.** If
-  `one-to-one-prep` refuses to characterise a person, this does too, including in the summary.
+  `one-to-one-prep` refuses to characterize a person, this does too, including in the summary.
 - **Never send, post, create or schedule anything.** It assembles.
 - Never fill a degraded section with its own analysis. Degraded means thinner, not invented.
 - **Draft only**, to the user.

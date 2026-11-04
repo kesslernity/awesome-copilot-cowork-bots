@@ -4,7 +4,7 @@
 
 | Bot | What it owns | Guide |
 |---|---|---|
-| [`internal-expert-finder`](internal-expert-finder/) | Finds who inside the organisation has already done a given kind of work, with the evidence for each name, and drafts the introduction. | [PDF](../../guides/internal-expert-finder.pdf) |
+| [`internal-expert-finder`](internal-expert-finder/) | Finds who inside the organization has already done a given kind of work, with the evidence for each name, and drafts the introduction. | [PDF](../../guides/internal-expert-finder.pdf) |
 | [`interview-loop-coordinator`](interview-loop-coordinator/) | Prepares an interview loop: who covers which competency, what each interviewer needs beforehand, and a consolidated feedback pack afterwards scored… | [PDF](../../guides/interview-loop-coordinator.pdf) |
 | [`onboarding-buddy`](onboarding-buddy/) | Builds a dated first-fortnight plan for a new joiner from the team's own documents, meetings and systems, naming who they meet and what they read on… | [PDF](../../guides/onboarding-buddy.pdf) |
 

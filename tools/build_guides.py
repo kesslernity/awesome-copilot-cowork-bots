@@ -163,69 +163,69 @@ CSS = """
 @page { size: A4; margin: 0; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-  width: 210mm; height: 297mm; background: #F5F1E8;
+  width: 210mm; height: 297mm; background: #F7F8FA;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #1C1A17; -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  color: #0F172A; -webkit-print-color-adjust: exact; print-color-adjust: exact;
   padding: 12mm 13mm 9mm; position: relative;
 }
-.eyebrow { font-size: 8.5pt; letter-spacing: .1em; color: #9A8F80; margin-bottom: 3mm;
+.eyebrow { font-size: 8.5pt; letter-spacing: .1em; color: #64748B; margin-bottom: 3mm;
            text-transform: uppercase; }
-.eyebrow b { color: #C4603C; font-weight: 700; }
+.eyebrow b { color: #2563EB; font-weight: 700; }
 h1 { font-family: Georgia, "Times New Roman", serif; font-size: 34pt; line-height: 1.0;
      letter-spacing: -.015em; margin-bottom: 3mm; }
-.job { font-size: 14.2pt; line-height: 1.34; color: #3C362F; max-width: 168mm;
-       padding-bottom: 4.2mm; border-bottom: 1.6px solid #E0D8C9; }
+.job { font-size: 14.2pt; line-height: 1.34; color: #334155; max-width: 168mm;
+       padding-bottom: 4.2mm; border-bottom: 1.6px solid #CBD5E1; }
 .row { display: flex; gap: 4mm; margin-top: 3.7mm; }
-.card { background: #FFFDF9; border: 1.2px solid #E6DECF; border-radius: 3mm; padding: 4.4mm 5mm; }
-.card.accent { background: #C4603C; border-color: #C4603C; }
+.card { background: #FFFFFF; border: 1.2px solid #E2E8F0; border-radius: 3mm; padding: 4.4mm 5mm; }
+.card.accent { background: #2563EB; border-color: #2563EB; }
 .card h2 { font-family: Georgia, serif; font-size: 14pt; margin-bottom: 2.6mm; letter-spacing: -.01em; }
 .card.accent h2 { color: #fff; }
-.card p, .card li { font-size: 11pt; line-height: 1.42; color: #46403A; }
-.card.accent p, .card.accent li { color: #FCEFE9; }
+.card p, .card li { font-size: 11pt; line-height: 1.42; color: #334155; }
+.card.accent p, .card.accent li { color: #EFF6FF; }
 ul { list-style: none; }
 li { position: relative; padding-left: 4mm; margin-bottom: 1.8mm; }
 li:last-child { margin-bottom: 0; }
 li::before { content: ""; position: absolute; left: 0; top: 1.9mm; width: 1.5mm; height: 1.5mm;
-             border-radius: 50%; background: #C4603C; }
-.card.accent li::before { background: #F6CDB9; }
+             border-radius: 50%; background: #2563EB; }
+.card.accent li::before { background: #BFDBFE; }
 .steps { display: flex; gap: 2.6mm; margin-top: 3.7mm; }
-.step { flex: 1; background: #FFFDF9; border: 1.2px solid #E6DECF; border-radius: 3mm;
+.step { flex: 1; background: #FFFFFF; border: 1.2px solid #E2E8F0; border-radius: 3mm;
         padding: 3.4mm 2.6mm; text-align: center; }
-.step .n { width: 6.6mm; height: 6.6mm; border-radius: 50%; background: #1C1A17; color: #F5F1E8;
+.step .n { width: 6.6mm; height: 6.6mm; border-radius: 50%; background: #0F172A; color: #F7F8FA;
            font-size: 9.5pt; font-weight: 700; line-height: 6.6mm; margin: 0 auto 2.2mm; }
-.step p { font-size: 8.4pt; line-height: 1.33; color: #46403A; }
+.step p { font-size: 8.4pt; line-height: 1.33; color: #334155; }
 .say { margin-top: 3.7mm; }
 .say h2 { font-family: Georgia, serif; font-size: 12pt; margin-bottom: 2.6mm; }
 .quotes { display: flex; gap: 2.6mm; }
-.q { flex: 1; background: #FFFDF9; border: 1.2px solid #E6DECF; border-left: 2.6mm solid #C4603C;
-     border-radius: 2mm; padding: 2.8mm 3.4mm; font-size: 9.2pt; color: #3C362F;
+.q { flex: 1; background: #FFFFFF; border: 1.2px solid #E2E8F0; border-left: 2.6mm solid #2563EB;
+     border-radius: 2mm; padding: 2.8mm 3.4mm; font-size: 9.2pt; color: #334155;
      font-style: italic; display: flex; align-items: center; }
-.band { margin-top: 3.7mm; background: #1C1A17; border-radius: 3mm; padding: 3.6mm 5.4mm;
+.band { margin-top: 3.7mm; background: #0F172A; border-radius: 3mm; padding: 3.6mm 5.4mm;
         display: flex; align-items: baseline; gap: 5mm; }
-.band .tag { font-size: 7.8pt; letter-spacing: .1em; text-transform: uppercase; color: #BFAE97;
+.band .tag { font-size: 7.8pt; letter-spacing: .1em; text-transform: uppercase; color: #94A3B8;
              white-space: nowrap; }
-.band .line { font-family: Georgia, serif; font-size: 17pt; line-height: 1.22; color: #F8F2E8; }
+.band .line { font-family: Georgia, serif; font-size: 17pt; line-height: 1.22; color: #F8FAFC; }
 /* The hero answers the only two questions a new reader has, side by side: what do I do,
    and what do I get. Everything that was competing with them is now below the fold. */
 .hero { display: flex; gap: 4mm; margin-top: 4mm; align-items: stretch; }
-.do { width: 53%; background: #1C1A17; border-radius: 3mm; padding: 4.4mm 4.8mm 4.8mm;
+.do { width: 53%; background: #0F172A; border-radius: 3mm; padding: 4.4mm 4.8mm 4.8mm;
       display: flex; flex-direction: column; }
-.note { margin-top: auto; padding-top: 4mm; font-size: 9.6pt; line-height: 1.4; color: #A79C8D;
-        border-top: 1px solid #38332C; }
-.note b { color: #E0D6C8; }
-.hh { font-family: Georgia, serif; font-size: 14.4pt; color: #F8F2E8; margin-bottom: 3mm; }
+.note { margin-top: auto; padding-top: 4mm; font-size: 9.6pt; line-height: 1.4; color: #94A3B8;
+        border-top: 1px solid #1E293B; }
+.note b { color: #E2E8F0; }
+.hh { font-family: Georgia, serif; font-size: 14.4pt; color: #F8FAFC; margin-bottom: 3mm; }
 .dl { display: flex; align-items: center; gap: 3mm; text-decoration: none;
-      background: #C4603C; border-radius: 2.6mm; padding: 3.2mm 3.6mm; margin-bottom: 3mm; }
-.dln { width: 6.6mm; height: 6.6mm; border-radius: 50%; background: #FFF3EC; color: #C4603C;
+      background: #2563EB; border-radius: 2.6mm; padding: 3.2mm 3.6mm; margin-bottom: 3mm; }
+.dln { width: 6.6mm; height: 6.6mm; border-radius: 50%; background: #EFF6FF; color: #2563EB;
        font-size: 9.5pt; font-weight: 700; line-height: 6.6mm; text-align: center; flex: none; }
 .dlt { flex: 1; min-width: 0; }
 .dlt b { display: block; font-size: 11.4pt; color: #fff; letter-spacing: .005em; }
-.dlf { display: block; font-size: 11pt; font-weight: 700; color: #FFE8DC; }
-.dlr { display: block; font-size: 7.4pt; color: #F2C4AE; margin-top: .6mm;
+.dlf { display: block; font-size: 11pt; font-weight: 700; color: #DBEAFE; }
+.dlr { display: block; font-size: 7.4pt; color: #93C5FD; margin-top: .6mm;
        white-space: nowrap; }
-.dla { font-size: 15pt; color: #FFD9C6; flex: none; }
+.dla { font-size: 15pt; color: #BFDBFE; flex: none; }
 .ms { display: flex; gap: 3mm; align-items: baseline; margin-bottom: 1.9mm; }
-.n2 { width: 6.6mm; font-size: 9pt; font-weight: 700; color: #C4603C; flex: none;
+.n2 { width: 6.6mm; font-size: 9pt; font-weight: 700; color: #2563EB; flex: none;
       text-align: center; }
 .ms span:last-child { font-size: 10.8pt; line-height: 1.4; color: #E6DFD4; }
 .ms b { color: #fff; }
@@ -235,28 +235,28 @@ li::before { content: ""; position: absolute; left: 0; top: 1.9mm; width: 1.5mm;
 /* The phrases sit under step 5, indented to its text column, so "say one of these" and the
    things to say read as one instruction rather than two blocks. */
 .do .quotes { display: block; margin: 2.2mm 0 0 9.6mm; }
-.do .q { display: block; flex: none; background: #2B2722; border: none;
-         border-left: 2.2mm solid #C4603C; border-radius: 1.6mm; padding: 1.9mm 3mm;
-         font-size: 10.6pt; color: #F6DCCD; margin-bottom: 1.7mm; }
+.do .q { display: block; flex: none; background: #1E293B; border: none;
+         border-left: 2.2mm solid #2563EB; border-radius: 1.6mm; padding: 1.9mm 3mm;
+         font-size: 10.6pt; color: #DBEAFE; margin-bottom: 1.7mm; }
 .do .q:last-child { margin-bottom: 0; }
-.sched { margin-top: 3.7mm; border: 1.2px solid #E0D8C9; border-radius: 3mm;
+.sched { margin-top: 3.7mm; border: 1.2px solid #CBD5E1; border-radius: 3mm;
           padding: 3.6mm 5mm; font-size: 10.6pt; line-height: 1.42; color: #4A443C; }
-.sched b { color: #1C1A17; }
+.sched b { color: #0F172A; }
 .pre { margin-top: 3.7mm; display: flex; gap: 2.6mm; }
-.chip { flex: 1; border: 1.2px dashed #CFC2AC; border-radius: 2.4mm; padding: 2.4mm 3mm; }
-.chip b { display: block; font-size: 8.8pt; color: #C4603C; margin-bottom: .9mm;
+.chip { flex: 1; border: 1.2px dashed #CBD5E1; border-radius: 2.4mm; padding: 2.4mm 3mm; }
+.chip b { display: block; font-size: 8.8pt; color: #2563EB; margin-bottom: .9mm;
           letter-spacing: .04em; text-transform: uppercase; }
-.chip span { font-size: 9.8pt; line-height: 1.38; color: #5A5249; }
+.chip span { font-size: 9.8pt; line-height: 1.38; color: #475569; }
 .foot { position: absolute; left: 13mm; right: 13mm; bottom: 9mm;
         display: flex; justify-content: space-between; align-items: baseline;
-        border-top: 1.6px solid #E0D8C9; padding-top: 3mm;
-        font-size: 7.6pt; color: #9A8F80; }
-.foot b { color: #C4603C; }
+        border-top: 1.6px solid #CBD5E1; padding-top: 3mm;
+        font-size: 7.6pt; color: #64748B; }
+.foot b { color: #2563EB; }
 .w33 { width: 33.33%; } .w50 { width: 50%; }
 """
 
 PAGE = """<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>
-<div class="eyebrow">Microsoft 365 Copilot Cowork &nbsp;·&nbsp; <b>{pack}</b> &nbsp;·&nbsp; Free, MIT licence</div>
+<div class="eyebrow">Microsoft 365 Copilot Cowork &nbsp;·&nbsp; <b>{pack}</b> &nbsp;·&nbsp; Free, MIT license</div>
 <h1>{title}</h1>
 <p class="job">{job}</p>
 
@@ -269,13 +269,14 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8"><style>{css}</style><
         <span class="dlr">{repo}</span></span>
       <span class="dla">&#8595;</span>
     </a>
-    <div class="ms"><span class="n2">2</span><span>In Cowork, open <b>Customize</b> in the side panel</span></div>
+    <div class="ms"><span class="n2">2</span><span>In Cowork, open <b>Customize</b> from the left navigation</span></div>
     <div class="ms"><span class="n2">3</span><span>Go to the <b>Skills</b> tab</span></div>
     <div class="ms"><span class="n2">4</span><span>Select the arrow next to <b>Add</b>, then <b>Upload skill</b>, and choose the file</span></div>
     <div class="ms"><span class="n2">5</span><span>Start a <b>new</b> chat and say one of these</span></div>
     <div class="quotes">{quotes}</div>
-    <p class="note">Nothing is sent, posted or deleted unless you press a button.
-      <b>Changed your mind?</b> Remove the skill from the same <b>Skills</b> tab.</p>
+    <p class="note">Written to prepare and stop. Cowork still asks before it sends, so approve
+      one action at a time and avoid <b>always allow</b> while you are trying it.
+      <b>AI prepares, people decide.</b></p>
   </div>
 
   <div class="getcol">
@@ -291,13 +292,13 @@ Monday at 9”</i> and Cowork schedules it. You get 25 schedules, so spend them 
 would otherwise forget.</div>
 
 <div class="pre">
-  <div class="chip"><b>New to Cowork?</b><span>It is the part of Copilot that <i>does the work</i>, not just the chatting. A skill is one file that teaches it a job you repeat.</span></div>
-  <div class="chip"><b>You need</b><span>Microsoft 365 Copilot with Cowork switched on by your admin. It is off by default, and not on mobile.</span></div>
-  <div class="chip"><b>It is metered</b><span>Cowork bills on usage. Your admin can cap what you spend.</span></div>
-  <div class="chip"><b>Make it yours</b><span>Open <i>references/config.md</i> inside the file to set the names and thresholds.</span></div>
+  <div class="chip"><b>Desktop only</b><span>Cowork runs on mobile. Uploaded skills do not. Use a laptop.</span></div>
+  <div class="chip"><b>You need</b><span>Microsoft 365 Copilot, and Cowork switched on by your admin. Off by default.</span></div>
+  <div class="chip"><b>It is metered</b><span>Cowork bills Copilot Credits as you use it. Your admin sets the policy.</span></div>
+  <div class="chip"><b>Read it first</b><span>A skill is instructions to the AI. Open the zip and read SKILL.md first; it is plain text.</span></div>
 </div>
 
-<div class="foot"><span>{repo}</span><span>Not affiliated with, or endorsed by, Microsoft. &nbsp;·&nbsp; <b>Free to share</b></span></div>
+<div class="foot"><span>By Mathieu Kessler &nbsp;·&nbsp; <b>kesslernity.com/store</b> &nbsp;·&nbsp; v1.0, Nov 2026</span><span>© 2026 Kesslernity &nbsp;·&nbsp; MIT license &nbsp;·&nbsp; Not affiliated with, or endorsed by, Microsoft</span></div>
 </body></html>"""
 
 
@@ -421,7 +422,11 @@ def check(bots):
     The cover is measured too. It is the one page nobody would think to re-render after a
     copy change, which makes it the one most likely to overflow unnoticed.
     """
-    pages = [("00-start-here", build_cover(bots))] + [(b.name, build_html(b)) for b in bots]
+    pages = ([("00-start-here", build_cover(bots)),
+              ("01-for-the-admin", build_admin(bots)),
+              ("02-for-the-ciso", build_ciso(bots)),
+              ("03-for-the-cfo", build_cfo(bots))]
+             + [(b.name, build_html(b)) for b in bots])
     worst, fails = None, []
     for name, markup in pages:
         h = BUILD / f"probe-{name}.html"
@@ -450,18 +455,18 @@ def check(bots):
 
 COVER = """<!doctype html><html><head><meta charset="utf-8"><style>{css}
 .packs {{ display: flex; flex-wrap: wrap; gap: 2.6mm; margin-top: 3.7mm; }}
-.pk {{ width: calc(25% - 2mm); background: #FFFDF9; border: 1.2px solid #E6DECF;
+.pk {{ width: calc(25% - 2mm); background: #FFFFFF; border: 1.2px solid #E2E8F0;
       border-radius: 2.6mm; padding: 2.2mm 3mm; display: flex; justify-content: space-between;
       align-items: baseline; }}
 .pk b {{ font-family: Georgia, serif; font-size: 10.4pt; }}
-.pk span {{ font-size: 8.6pt; color: #8A8073; }}
+.pk span {{ font-size: 8.6pt; color: #64748B; }}
 .band .line {{ font-size: 14.5pt; }}
-.grab {{ margin-top: 3.7mm; background: #C4603C; border-radius: 3mm; text-decoration: none;
+.grab {{ margin-top: 3.7mm; background: #2563EB; border-radius: 3mm; text-decoration: none;
         padding: 3.8mm 5mm; display: flex; justify-content: space-between; align-items: baseline; }}
 .grab .g1 {{ font-family: Georgia, serif; font-size: 13pt; color: #fff; }}
-.grab .g2 {{ font-size: 10.6pt; color: #FFE8DC; font-weight: 700; }}
+.grab .g2 {{ font-size: 10.6pt; color: #DBEAFE; font-weight: 700; }}
 </style></head><body>
-<div class="eyebrow">Microsoft 365 Copilot Cowork &nbsp;·&nbsp; <b>Start here</b> &nbsp;·&nbsp; Free, MIT licence</div>
+<div class="eyebrow">Microsoft 365 Copilot Cowork &nbsp;·&nbsp; <b>Start here</b> &nbsp;·&nbsp; Free, MIT license</div>
 <h1>Give Copilot a job<br>it can do without you</h1>
 <p class="job">{count} ready-made bots for Microsoft 365 Copilot Cowork. Each is one file you
 upload once. After that you ask in plain English, and the work happens inside your own mailbox
@@ -474,9 +479,9 @@ and files, under your own permissions.</p>
   <div class="card w33"><h2>What a skill is</h2><p>One file that teaches Cowork a job you keep
     repeating, so you stop explaining it every time. It sits in your own OneDrive. Nobody else
     sees it unless you share it.</p></div>
-  <div class="card accent w33"><h2>Why these are safe to try</h2><p>Every bot here reads and
-    prepares, then stops. Sending, posting and deleting wait for a button you press, and no bot
-    here decides otherwise for you.</p></div>
+  <div class="card accent w33"><h2>Why these are safe to try</h2><p>Every bot is written to
+    prepare and stop, and Cowork asks before it sends. Approve one action at a time. Cowork
+    cannot delete anything in OneDrive or SharePoint at all.</p></div>
 </div>
 
 <div class="steps">{steps}</div>
@@ -487,24 +492,196 @@ and files, under your own permissions.</p>
 result. A bot that invents a finding to look busy teaches you to stop reading it.</span></div>
 
 <div class="pre">
-  <div class="chip"><b>You need</b><span>Microsoft 365 Copilot with Cowork switched on by your admin. It is off by default.</span></div>
-  <div class="chip"><b>Not on mobile</b><span>Uploaded skills only work on a laptop or desktop.</span></div>
-  <div class="chip"><b>It is metered</b><span>Cowork bills on usage. Your admin can cap what you spend.</span></div>
+  <div class="chip"><b>You need</b><span>Microsoft 365 Copilot, and Cowork switched on by your admin. Off by default.</span></div>
+  <div class="chip"><b>Desktop only</b><span>Cowork runs on mobile. Uploaded skills do not. Use a laptop.</span></div>
+  <div class="chip"><b>It is metered</b><span>Cowork bills Copilot Credits as you use it. Your admin sets the policy.</span></div>
   <div class="chip"><b>Room for all of them</b><span>You can hold 50 skills. These {count} use under half.</span></div>
 </div>
 
 <a class="grab" href="{raw}"><span class="g1">Download them all, free</span><span class="g2">{repo} &nbsp;&#8595;</span></a>
 
-<div class="foot"><span>Every bot ships with its own one-page guide like this one.</span><span>Not affiliated with, or endorsed by, Microsoft. &nbsp;·&nbsp; <b>MIT licence, free to share</b></span></div>
+<div class="foot"><span>By Mathieu Kessler &nbsp;·&nbsp; <b>kesslernity.com/store</b> &nbsp;·&nbsp; v1.0, Nov 2026, checked against Microsoft docs 4 Nov 2026</span><span>© 2026 Kesslernity &nbsp;·&nbsp; MIT license</span></div>
 </body></html>"""
 
 COVER_STEPS = [
     "Pick a bot and <b>download its file</b>",
-    "In Cowork, open <b>Customize</b>",
+    "Open <b>Customize</b>, left navigation",
     "Go to the <b>Skills</b> tab",
     "<b>Add</b> → <b>Upload skill</b>, pick the file",
     "Start a <b>new</b> chat and ask it for the job",
 ]
+
+
+ROLE_PAGE = """<!doctype html><html><head><meta charset="utf-8"><style>{css}
+.rrow {{ display: flex; gap: 4mm; margin-top: 3.7mm; align-items: stretch; }}
+.rcol {{ flex: 1; display: flex; flex-direction: column; gap: 4mm; }}
+.rlist li {{ font-size: 10.4pt; line-height: 1.42; margin-bottom: 2mm; }}
+.kv {{ display: flex; gap: 4mm; align-items: baseline; margin-bottom: 2.2mm; }}
+.kv b {{ width: 46mm; flex: none; font-size: 10pt; color: #0F172A; }}
+.kv span {{ font-size: 10.2pt; line-height: 1.4; color: #334155; }}
+.warnbox {{ margin-top: 3.7mm; background: #FEF2F2; border: 1.6px solid #DC2626;
+           border-radius: 3mm; padding: 4mm 5mm; }}
+.warnbox b {{ color: #B91C1C; }}
+.warnbox p {{ font-size: 10.2pt; line-height: 1.42; color: #334155; }}
+</style></head><body>
+<div class="eyebrow">Microsoft 365 Copilot Cowork &nbsp;·&nbsp; <b>{role}</b> &nbsp;·&nbsp; Free, MIT license</div>
+<h1>{headline}</h1>
+<p class="job">{standfirst}</p>
+{body}
+<div class="foot"><span>By Mathieu Kessler &nbsp;·&nbsp; <b>kesslernity.com/store</b> &nbsp;·&nbsp; v1.0, Nov 2026, checked against Microsoft docs 4 Nov 2026</span><span>© 2026 Kesslernity &nbsp;·&nbsp; MIT license</span></div>
+</body></html>"""
+
+
+def _card(title, rows, accent=False):
+    items = "".join(f"<li>{E(r)}</li>" for r in rows)
+    cls = "card accent" if accent else "card"
+    return f'<div class="{cls}" style="flex:1"><h2>{E(title)}</h2><ul class="rlist">{items}</ul></div>'
+
+
+def build_admin(bots):
+    """The prerequisites and rollout facts an end user does not need and an admin does."""
+    body = f"""
+<div class="rrow">
+  {_card("Before anyone can open Cowork", [
+      "A Microsoft 365 Copilot license for the user.",
+      "Usage-based billing enabled in the tenant. Cowork is off until it is.",
+      "A spending policy that selects Cowork: admin center, Copilot, Cost management.",
+      "The user in scope of that policy. Cowork is limited to Anthropic-supported regions.",
+  ])}
+  {_card("The thing that catches people out", [
+      "A spending policy is an access control, not only a budget.",
+      "Any user in scope who selects Cowork can use it, however small the limit. One credit still grants access.",
+      "To keep someone out, leave them out of every policy that selects Cowork. Do not lower their limit.",
+      "Enforcement is asynchronous, so a cap is not an instant stop.",
+  ], accent=True)}
+</div>
+
+<div class="rrow">
+  {_card("Rolling these skills out", [
+      "Each user uploads their own. There is no tenant-wide install for a custom skill.",
+      "A user can hold 50 custom skills and 25 scheduled prompts. Skills are cheap; schedules are scarce.",
+      "Per skill: SKILL.md up to 1 MB, up to 20 companion files, 10 MB total.",
+      "Uploaded skills do not work on Cowork mobile. Cowork itself does.",
+  ])}
+  {_card("Test before you schedule", [
+      "Upload one skill, run it once on a quiet week, and read the output before anyone schedules it.",
+      "After editing references/config.md, start a NEW conversation. Changes apply to new sessions only.",
+      "Automated task activity lands in the unified audit log; Purview policies apply.",
+  ])}
+</div>
+
+<div class="warnbox">
+  <b>Microsoft does not validate custom skills created by users.</b>
+  <p>A skill runs as instructions to the AI, so treat an uploaded file the way you would treat a
+  script. Read SKILL.md before you approve a skill for your organization. Everything in this
+  catalog is plain text and readable in under two minutes.</p>
+</div>
+"""
+    return ROLE_PAGE.format(css=CSS, role="For the Microsoft 365 admin",
+                            headline="What you switch on, and what it costs you to switch on",
+                            standfirst="Cowork is off by default and the way it is turned on changed at general availability. "
+                                       "The old per-agent allow list is deprecated; access now comes from spending policy.",
+                            body=body)
+
+
+# Which skills read personal or HR data. Derived from the packs rather than typed,
+# plus two finance skills whose inputs are personal spending.
+SENSITIVE = {"one-to-one-prep", "interview-loop-coordinator", "onboarding-buddy",
+             "internal-expert-finder", "expense-reconciliation", "subscription-hunter"}
+
+
+def build_ciso(bots):
+    sens = [b for b in bots if b.name in SENSITIVE]
+    names = ", ".join(sorted(x.name.replace("-", " ") for x in sens))
+    body = f"""
+<div class="rrow">
+  {_card("What a skill actually is", [
+      "A plain-text Markdown file in the user's own OneDrive, at /Documents/Cowork/skills/.",
+      "It contains instructions, not code. Nothing is executed.",
+      "It runs as the user who invoked it and sees only what that user can see.",
+      "It cannot reach local files, cannot read encrypted files, and cannot delete anything in OneDrive or SharePoint.",
+  ])}
+  {_card("Where the risk actually is", [
+      "Microsoft does not validate custom skills created by users. A skill is instructions to the AI.",
+      "Approval can be skipped: a user may approve and skip similar prompts for the rest of a session, scoped to a recipient, a domain, or always.",
+      "Scheduled and event-driven tasks run with nobody watching, though they default to draft-and-approve.",
+      "The only durable control is reading the file. Every one here is plain text.",
+  ], accent=True)}
+</div>
+
+<div class="warnbox">
+  <b>{len(sens)} of these {len(bots)} skills read personal or HR data.</b>
+  <p>{E(names)}. Before anyone runs one of these against other people's data, clear it with HR,
+  your works council and privacy. Sensitivity labels carry through to what Cowork produces, and
+  the output lands in the user's own OneDrive.</p>
+</div>
+
+<div class="rrow">
+  {_card("What this catalog commits to", [
+      "Every skill reads and prepares, then stops. Sending, posting and deleting are not in any skill's instructions.",
+      "Every output line cites the mail, file or meeting it came from. An unsourced line is a defect.",
+      "No skill advises on safety authorisation: permit to work, lock-out tag-out, confined space, JSA, incident classification, inspection sign-off.",
+      "Nothing is obfuscated, minified or compiled. MIT license, read it all.",
+  ])}
+  {_card("Questions worth asking before approval", [
+      "Which mailbox, which site, which calendar does this read? It is written in the skill's Inputs section.",
+      "What happens on a quiet period? Every skill here states its silent case.",
+      "Who sees the output? The creating user only, unless they approve otherwise.",
+      "What is in the audit log? Automated task activity is recorded alongside other Cowork activity.",
+  ])}
+</div>
+"""
+    return ROLE_PAGE.format(css=CSS, role="For the CISO",
+                            headline="Instructions in a text file, running as the user",
+                            standfirst="No code executes. The exposure is what the instructions tell the model to read, "
+                                       "and whether anyone read the instructions first.",
+                            body=body)
+
+
+def build_cfo(bots):
+    body = f"""
+<div class="rrow">
+  {_card("What this costs", [
+      "These {n} skills cost nothing. MIT license, no purchase, no subscription, no email required.",
+      "What costs money is Cowork itself, which bills Copilot Credits on usage.",
+      "Model responses, tool and skill calls, image generation and browser tasks all consume credits.",
+      "There is no per-skill fee. A skill is a text file; running it is what meters.",
+  ])}
+  {_card("Where the control sits", [
+      "A spending policy in Microsoft 365 admin center, Copilot, Cost management.",
+      "Limits can be set per tenant, per group or per user.",
+      "That policy is also the access control. Any user in scope can use Cowork however small the limit.",
+      "Enforcement is asynchronous, so treat a cap as a boundary, not a hard stop.",
+  ], accent=True)}
+</div>
+
+<div class="rrow">
+  {_card("What moves the number", [
+      "Reasoning effort, which sits next to the model picker and defaults to Medium.",
+      "Which model runs. Auto is the default and picks for the task.",
+      "Scheduled prompts, because they run whether or not anyone needed them that week.",
+      "Type /cost in a session to see usage so far.",
+  ])}
+  {_card("The budgeting mistake to avoid", [
+      "A user can hold 50 custom skills but only 25 scheduled prompts.",
+      "Skills are free to hold and cost nothing until invoked.",
+      "Schedules are the recurring line, because each one runs on a clock regardless of need.",
+      "Every skill here runs on demand by default. A schedule is opt-in, per skill.",
+  ])}
+</div>
+
+<div class="warnbox">
+  <b>The honest version of the business case.</b>
+  <p>These skills remove preparation time, not decisions. Every one drafts and stops, which means
+  a person still reads the output. Any saving that assumes nobody reviews the result is not a
+  saving this catalog supports.</p>
+</div>
+"""
+    return ROLE_PAGE.format(css=CSS, role="For the CFO",
+                            headline="The skills are free. The runtime is metered.",
+                            standfirst="Nothing here is a license purchase. The cost is Copilot Credits consumed when a "
+                                       "skill runs, and the lever is the spending policy.",
+                            body=body.replace("{n}", str(len(bots))))
 
 
 def build_cover(bots):
@@ -548,7 +725,10 @@ def main():
         sys.exit(0 if check(bots) else 1)
 
     OUT.mkdir(exist_ok=True)
-    pages = [("00-start-here", build_cover(bots))] if not args.only else []
+    pages = ([("00-start-here", build_cover(bots)),
+              ("01-for-the-admin", build_admin(bots)),
+              ("02-for-the-ciso", build_ciso(bots)),
+              ("03-for-the-cfo", build_cfo(bots))] if not args.only else [])
     pages += [(b.name, build_html(b)) for b in bots]
 
     made = []

@@ -8,7 +8,7 @@
 | [`cloud-cost-digest`](cloud-cost-digest/) | Turns cloud billing exports and provider alert emails into a short digest of what moved, what is anomalous and what to ask an owner about. | [PDF](../../guides/cloud-cost-digest.pdf) |
 | [`expense-reconciliation`](expense-reconciliation/) | Reconciles submitted expense claims against the receipts and statements sitting in the mailbox, lists what is missing or unmatched, and drafts the… | [PDF](../../guides/expense-reconciliation.pdf) |
 | [`invoice-vendor-followup`](invoice-vendor-followup/) | Finds invoice and payment threads in the mailbox that have gone unanswered, ages them, and drafts the follow-up to each counterparty. | [PDF](../../guides/invoice-vendor-followup.pdf) |
-| [`subscription-hunter`](subscription-hunter/) | Finds every recurring subscription, licence and service renewal hiding in the user's mailbox and files, and builds a dated renewal calendar with a… | [PDF](../../guides/subscription-hunter.pdf) |
+| [`subscription-hunter`](subscription-hunter/) | Finds every recurring subscription, license and service renewal hiding in the user's mailbox and files, and builds a dated renewal calendar with a… | [PDF](../../guides/subscription-hunter.pdf) |
 
 ## Installing this pack
 

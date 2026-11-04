@@ -22,11 +22,17 @@ Not affiliated with, or endorsed by, Microsoft, xAI or Cursor.
 
 ## What you need
 
-- A **Microsoft 365 Copilot** licence, with **Cowork enabled by an admin**. It is off by default.
-- Cowork is billed on **usage**: model responses, tool and skill calls and browser tasks all
-  count. Admins can cap per user or per group.
+- A **Microsoft 365 Copilot** license, and **Cowork enabled by your admin**. Since general
+  availability that means usage-based billing switched on plus a **spending policy that selects
+  Cowork**, in Microsoft 365 admin center, Copilot, Cost management. The per-agent allow list
+  from the preview is deprecated.
+- 🔴 **That policy is an access control, not only a budget.** Anyone in its scope can use Cowork
+  however small the limit; a one-credit limit still grants access. Enforcement is asynchronous,
+  so a cap is a boundary rather than an instant stop.
+- Cowork bills **Copilot Credits**: model responses, tool and skill calls and browser tasks all
+  count.
 - Cowork is limited to **Anthropic-supported regions**.
-- **Custom skills do not work on mobile.** Install and run these on a laptop or desktop.
+- **Cowork runs on mobile; uploaded custom skills do not.** Install and run these on a laptop.
 
 ## Install a bot in about two minutes
 
@@ -39,6 +45,15 @@ Not affiliated with, or endorsed by, Microsoft, xAI or Cursor.
 
 Then open the bot's `skill/references/config.md`, which is where the thresholds, names and
 projects live. One skill serves many people because that file differs.
+
+**Read before you upload.** Microsoft's own note: a skill runs as instructions to the AI, so
+only upload skills from sources you trust, and Microsoft does not validate custom skills created
+by users. Everything here is plain text; open the zip and read `SKILL.md` first. It takes about
+two minutes.
+
+**Test before you schedule.** Run a skill once on a quiet period and read what comes back before
+anyone puts it on a clock. After editing `references/config.md`, re-upload or edit in place, then
+start a **new** conversation: changes apply to new sessions only.
 
 Full detail, including the manual OneDrive route: [docs/install.md](docs/install.md).
 
@@ -62,7 +77,7 @@ for one. Installing all 23 costs under half your skill allowance.
 
 ---
 
-## The catalogue
+## The catalog
 
 <!-- CATALOGUE:start -->
 **23 bots in 8 packs.** Every one ships as an upload-ready archive in `dist/`.
@@ -77,8 +92,8 @@ for one. Installing all 23 costs under half your skill allowance.
 |  | [`cloud-cost-digest`](packs/finance-finops/cloud-cost-digest/) | Turns cloud billing exports and provider alert emails into a short digest of what moved, what is anomalous and what to ask an owner about. |
 |  | [`expense-reconciliation`](packs/finance-finops/expense-reconciliation/) | Reconciles submitted expense claims against the receipts and statements sitting in the mailbox, lists what is missing or unmatched, and drafts the… |
 |  | [`invoice-vendor-followup`](packs/finance-finops/invoice-vendor-followup/) | Finds invoice and payment threads in the mailbox that have gone unanswered, ages them, and drafts the follow-up to each counterparty. |
-|  | [`subscription-hunter`](packs/finance-finops/subscription-hunter/) | Finds every recurring subscription, licence and service renewal hiding in the user's mailbox and files, and builds a dated renewal calendar with a… |
-| **People & HR** | [`internal-expert-finder`](packs/people-hr/internal-expert-finder/) | Finds who inside the organisation has already done a given kind of work, with the evidence for each name, and drafts the introduction. |
+|  | [`subscription-hunter`](packs/finance-finops/subscription-hunter/) | Finds every recurring subscription, license and service renewal hiding in the user's mailbox and files, and builds a dated renewal calendar with a… |
+| **People & HR** | [`internal-expert-finder`](packs/people-hr/internal-expert-finder/) | Finds who inside the organization has already done a given kind of work, with the evidence for each name, and drafts the introduction. |
 |  | [`interview-loop-coordinator`](packs/people-hr/interview-loop-coordinator/) | Prepares an interview loop: who covers which competency, what each interviewer needs beforehand, and a consolidated feedback pack afterwards scored… |
 |  | [`onboarding-buddy`](packs/people-hr/onboarding-buddy/) | Builds a dated first-fortnight plan for a new joiner from the team's own documents, meetings and systems, naming who they meet and what they read on… |
 | **IT & Ops** | [`change-advisory-prep`](packs/it-ops/change-advisory-prep/) | Assembles the pack for the next change advisory board from the change requests, threads and documents already circulating, with the risk and rollback… |
@@ -110,7 +125,7 @@ in your tenant. Nine others were cut because they duplicate skills in
 which is a sibling repository and the place to look for inbox triage, meeting prep and
 transcript-to-actions.
 
-A catalogue is more useful when it says what it is not.
+A catalog is more useful when it says what it is not.
 
 ## The shape every bot passes
 

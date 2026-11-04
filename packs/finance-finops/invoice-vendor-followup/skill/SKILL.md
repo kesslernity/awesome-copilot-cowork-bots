@@ -45,7 +45,7 @@ and every counterparty due a chase has one draft.
   list, which exists for relationships being handled by a person.
 - Never state an amount as owed. The ledger is the source of truth.
 - Never escalate a ladder step on your own. The user chooses the step.
-- Never contact anyone outside the organisation without approval.
+- Never contact anyone outside the organization without approval.
 
 ## Self-check
 - Is every age measured from the last message, not the invoice date?

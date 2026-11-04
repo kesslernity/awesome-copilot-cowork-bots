@@ -42,7 +42,7 @@ is a complete and useful answer.
 - Group threads only: say the direct channel has been quiet, which is itself worth noticing.
 
 ## Boundaries
-- 🔴 **Never assess, rate, or characterise the person.** No performance language, no sentiment
+- 🔴 **Never assess, rate, or characterize the person.** No performance language, no sentiment
   read, no "seems disengaged". This skill reports commitments and questions, and nothing about
   how someone is doing. That line is absolute: a drafting tool that editorialises about a
   colleague is a liability to the user who runs it.

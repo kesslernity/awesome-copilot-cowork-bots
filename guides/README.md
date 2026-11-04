@@ -1,34 +1,38 @@
 # The guides
 
-One A4 page per bot, plus a `00-start-here` cover, plus `all-bots.pdf` with the whole set.
+**27 A4 pages: four for the people who decide, 23 for the people who use them, plus
+`all-bots.pdf` with the whole set.**
 
-These are for the person who will actually use the bot, not for the person who reads a
-repository. They assume no knowledge of Cowork, of skills, or of what a `.zip` is doing in a
-folder called `dist`. Hand one to a colleague and they should be able to install the thing and
-get a result without asking you anything.
+| Page | Audience | What it answers |
+|---|---|---|
+| `00-start-here` | Anyone | What this is, what is in it, how to install one |
+| `01-for-the-admin` | Microsoft 365 admin | What you switch on, and the spending policy that is also an access control |
+| `02-for-the-ciso` | CISO | What a skill actually is, where the risk is, which six read personal data |
+| `03-for-the-cfo` | CFO | What is free, what meters, and where the control sits |
+| 23 bot pages | The person using it | One job, one page |
 
-The top half of every page is two columns answering the only two questions a reader has
-before they decide:
+The split exists because the audiences want different facts. Spending policy and region
+limits are admin facts; the trust boundary and the six personal-data skills are CISO facts;
+Copilot Credits and the schedule ceiling are CFO facts. Putting all of that on the end user's
+page made it longer and less useful, which is what the first version did.
 
-- **Do this** — the five steps, led by a **live download button** that points straight at the
-  bot's archive in `dist/`. It is a real PDF link annotation, so it is clickable from any
-  viewer. A guide that says "download the file" without a link is a dead end.
-- **And you get back** — three concrete lines, next to **what it will never do without
-  asking you**, which is the pair that decides whether someone installs it.
+## The 23 bot pages
 
-Below that sits the bot's own stated principle, pulled from `## Definition of done` in its
-`SKILL.md`: *a flat week is normal*, *finding nobody is a real and useful answer*, *silence is
-the success state*. Those lines are the honest part of this catalogue and the reason the bots
-are worth installing, so they are set in the largest type on the page.
+The top half is two columns answering the only two questions a reader has before they decide:
 
-Then how to put it on a schedule, and four footnotes. "What is Cowork" is one of those
-footnotes rather than the opening, because a reader holding the PDF wants the action first
-and the background second.
+- **Do this** — five steps, led by a **live download button** that points at the bot's archive.
+  It is a real PDF link annotation, clickable from any viewer.
+- **And you get back** — three concrete lines, beside **what it will never do without asking
+  you**, which is the pair that decides whether someone installs it.
+
+Below that: the bot's own principle, pulled from `## Definition of done` in its `SKILL.md`.
+*A flat week is normal. Finding nobody is a real and useful answer.* Those lines are why the
+bots are worth installing, so they are set in the largest type on the page.
 
 ## Rebuilding them
 
 ```bash
-python3 tools/build_guides.py           # all 24 pages, plus the bundle
+python3 tools/build_guides.py           # all 27 pages, plus the bundle
 python3 tools/build_guides.py --check   # measure fit, build nothing
 python3 tools/build_guides.py --only subscription-hunter
 ```

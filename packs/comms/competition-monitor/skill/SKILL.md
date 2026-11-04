@@ -41,7 +41,7 @@ When something changed:
 Then one line each on why it is material.
 
 When nothing changed: **one line.** "No material change across N competitors since <date>." Then
-stop. Do not list what you checked, do not summarise the market, do not add context.
+stop. Do not list what you checked, do not summarize the market, do not add context.
 
 ## Definition of done
 The snapshot is written, and either the material changes are listed with before-and-after, or a
@@ -60,7 +60,7 @@ reporting a near-miss. If it did not pass the materiality test, it does not appe
 ## Boundaries
 - **Never access anything behind a login, a paywall or a trial.** Public pages only.
 - Never report a competitor's non-public information even if a source offers it.
-- Never characterise a competitor's intent or finances. Report the observed attribute.
+- Never characterize a competitor's intent or finances. Report the observed attribute.
 - **Draft only.** Circulating this is the user's action.
 
 ## Self-check

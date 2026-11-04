@@ -23,7 +23,7 @@
         "New sources quoting you for the first time"
       ],
       "never": [
-        "Never claim to measure any named assistant’s answers. The card and this file both say so.",
+        "Never claim to show what ChatGPT, Copilot or any other assistant answers. This reports what the open web says about the brand, through Deep Research.",
         "Never act on the findings: no content is published, no page is edited, nothing is sent.",
         "Never record a competitor’s non-public information."
       ],
@@ -52,7 +52,7 @@
       "never": [
         "Never access anything behind a login, a paywall or a trial. Public pages only.",
         "Never report a competitor’s non-public information even if a source offers it.",
-        "Never characterise a competitor’s intent or finances. Report the observed attribute."
+        "Never characterize a competitor’s intent or finances. Report the observed attribute."
       ],
       "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/competition-monitor.zip",
       "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/competition-monitor.pdf",
@@ -133,7 +133,7 @@
       "never": [
         "Never accept, decline, move, shorten, cancel or create anything. Every output is a proposal for the user.",
         "Never touch anything on the config never-touch list.",
-        "Never characterise a colleague’s meeting as a waste of time. Report the absence of an agenda as a fact and let the user decide."
+        "Never characterize a colleague’s meeting as a waste of time. Report the absence of an agenda as a fact and let the user decide."
       ],
       "zipUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/dist/calendar-defender.zip",
       "guideUrl": "https://github.com/kesslernity/awesome-copilot-cowork-bots/raw/main/guides/calendar-defender.pdf",
@@ -253,7 +253,7 @@
       "job": "Surfaces every recurring charge in the mailbox before it renews itself, with a drafted reply ready.",
       "pack": "finance-finops",
       "packLabel": "Finance & FinOps",
-      "description": "Finds every recurring subscription, licence and service renewal hiding in the user's mailbox and files, and builds a dated renewal calendar with a drafted cancellation or renegotiation reply for each one. Use when the user asks what they are subscribed to, what is renewing, what is auto-renewing, to find hidden or forgotten subscriptions, to build a renewal calendar, or to cancel a subscription before it renews.",
+      "description": "Finds every recurring subscription, license and service renewal hiding in the user's mailbox and files, and builds a dated renewal calendar with a drafted cancellation or renegotiation reply for each one. Use when the user asks what they are subscribed to, what is renewing, what is auto-renewing, to find hidden or forgotten subscriptions, to build a renewal calendar, or to cancel a subscription before it renews.",
       "principle": "Finding nothing is a success.",
       "triggers": [
         "What are we subscribed to?",
@@ -361,7 +361,7 @@
       "job": "Answers “who here has already solved this”, with the evidence, before anyone reinvents it.",
       "pack": "people-hr",
       "packLabel": "People & HR",
-      "description": "Finds who inside the organisation has already done a given kind of work, with the evidence for each name, and drafts the introduction. Strictly internal, never external sourcing. Use when the user asks who has done this before, who knows about a topic, who to ask internally, or who worked on a similar project.",
+      "description": "Finds who inside the organization has already done a given kind of work, with the evidence for each name, and drafts the introduction. Strictly internal, never external sourcing. Use when the user asks who has done this before, who knows about a topic, who to ask internally, or who worked on a similar project.",
       "principle": "Finding nobody is a real and useful answer.",
       "triggers": [
         "Who here has done this before?",
@@ -563,7 +563,7 @@
         "Items carried over from last time, marked and counted"
       ],
       "never": [
-        "Never assess, rate, or characterise the person. No performance language, no sentiment read, no “seems disengaged”.",
+        "Never assess, rate, or characterize the person. No performance language, no sentiment read, no “seems disengaged”.",
         "Never read 1:1 notes about this person written by someone else.",
         "Never draft feedback, and never prepare anything for a performance process."
       ],

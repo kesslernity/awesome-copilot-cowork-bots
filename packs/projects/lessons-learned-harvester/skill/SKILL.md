@@ -40,7 +40,7 @@ are listed rather than forced.
 present it as that project's close-out rather than as a pattern.
 
 ## When there is no data
-- No close-out material found: report the folders searched. Many organisations do not write these,
+- No close-out material found: report the folders searched. Many organizations do not write these,
   and that finding is itself worth reporting.
 - Material exists but has no recommendations: report the problems and say recommendations were
   absent.
@@ -49,7 +49,7 @@ present it as that project's close-out rather than as a pattern.
 - **Never attribute a lesson to a named individual.** Lessons attach to projects and processes.
 - Never state a cause the source material does not state.
 - Never rewrite a recommendation into something stronger than what was written.
-- 🔴 Never characterise a safety event, an incident classification or a regulatory finding.
+- 🔴 Never characterize a safety event, an incident classification or a regulatory finding.
   Those live in their own systems with their own process, and summarising them here would be
   creating an unofficial record of an official thing.
 - **Draft only.**
