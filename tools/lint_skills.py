@@ -186,6 +186,15 @@ def main():
     if not args.check:
         print(f"{built} archives written to dist/")
 
+    # dist/ is committed and published, so anything that is not an archive is debris that
+    # ships. An unzipped skill left here once became a second, unmaintained copy of a real
+    # one; nothing would have noticed it drifting.
+    if DIST.exists():
+        strays = sorted(p.name for p in DIST.iterdir()
+                        if p.name != ".DS_Store" and p.suffix != ".zip")
+        if strays:
+            errors.append(f"dist/ holds non-archive entries: {', '.join(strays)}")
+
     # The cap that actually binds is schedules, not skills. Report both.
     if len(bots) > USER_SKILL_CAP:
         errors.append(f"{len(bots)} skills exceeds the {USER_SKILL_CAP} a single user can hold")
