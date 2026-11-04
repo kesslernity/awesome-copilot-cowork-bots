@@ -1,6 +1,6 @@
 # The guides
 
-**27 A4 pages: four for the people who decide, 23 for the people who use them, plus
+**28 A4 pages: four for the people who decide, 23 for the people who use them, a closing page, plus
 `all-bots.pdf` with the whole set.**
 
 | Page | Audience | What it answers |
@@ -10,6 +10,7 @@
 | `02-for-the-ciso` | CISO | What a skill actually is, where the risk is, which six read personal data |
 | `03-for-the-cfo` | CFO | What is free, what meters, and where the control sits |
 | 23 bot pages | The person using it | One job, one page |
+| `99-where-to-go-next` | Anyone who finished | The newsletter and the store, once, at the end |
 
 The split exists because the audiences want different facts. Spending policy and region
 limits are admin facts; the trust boundary and the six personal-data skills are CISO facts;
@@ -32,7 +33,7 @@ bots are worth installing, so they are set in the largest type on the page.
 ## Rebuilding them
 
 ```bash
-python3 tools/build_guides.py           # all 27 pages, plus the bundle
+python3 tools/build_guides.py           # all 28 pages, plus the bundle
 python3 tools/build_guides.py --check   # measure fit, build nothing
 python3 tools/build_guides.py --only subscription-hunter
 ```

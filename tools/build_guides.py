@@ -426,7 +426,8 @@ def check(bots):
               ("01-for-the-admin", build_admin(bots)),
               ("02-for-the-ciso", build_ciso(bots)),
               ("03-for-the-cfo", build_cfo(bots))]
-             + [(b.name, build_html(b)) for b in bots])
+             + [(b.name, build_html(b)) for b in bots]
+             + [("99-where-to-go-next", build_closer(bots))])
     worst, fails = None, []
     for name, markup in pages:
         h = BUILD / f"probe-{name}.html"
@@ -684,6 +685,53 @@ def build_cfo(bots):
                             body=body.replace("{n}", str(len(bots))))
 
 
+def build_closer(bots):
+    """Back page of the bundle only. The 23 individual guides stay clean artifacts
+    somebody will forward; the ask lives here, once, at the end."""
+    body = f"""
+<div class="rrow">
+  {_card("Everything in this pack", [
+      f"{len(bots)} skills, free, MIT license. No purchase, no subscription, no email.",
+      "One A4 page per skill, plus pages for the admin, the CISO and the CFO.",
+      "kesslernity.com/cowork-bots for the browsable version and the downloads.",
+      "github.com/kesslernity/awesome-copilot-cowork-bots for the source and the research notes.",
+  ])}
+  {_card("If this was useful", [
+      "AI at Work, a biweekly briefing on getting this to land in a real organization.",
+      "Verified facts, tested prompts, and what changed that quarter. Free.",
+      "kesslernity.com/newsletter",
+  ], accent=True)}
+</div>
+
+<div class="rrow">
+  {_card("These are portable", [
+      "A skill is a plain SKILL.md file: frontmatter, then instructions in Markdown.",
+      "The prompt is the asset. The model behind it is a commodity.",
+      "Cowork itself runs several model families and picks per task.",
+      "The same file shape is read by other agents, so the thinking travels even if the runtime does not.",
+  ])}
+  {_card("When you want more than a free file", [
+      "kesslernity.com/store carries the paid kits: rollout plans, governance checks, cost models.",
+      "Written by the same practitioner, under the same rule: nothing claimed that is not verified.",
+      "Nothing in this pack is a trial of anything. It is finished and it is yours.",
+  ])}
+</div>
+
+<div class="warnbox" style="border-color:#2563EB;background:#EFF6FF">
+  <b>One last thing, and it is the whole point.</b>
+  <p>Every skill here prepares and stops. If you take nothing else from this pack, take the
+  habit: write the boundary into the file, name the case where the right answer is silence, and
+  make the output checkable in seconds. That works in any tool, including the one you build
+  yourself. AI prepares, people decide.</p>
+</div>
+"""
+    return ROLE_PAGE.format(css=CSS, role="Where to go next",
+                            headline="That is the whole catalog",
+                            standfirst="Free, finished, and not a funnel. If you want the paid work, it is one link away, "
+                                       "and if you never click it the skills still work.",
+                            body=body)
+
+
 def build_cover(bots):
     by_pack = {}
     for b in bots:
@@ -730,6 +778,8 @@ def main():
               ("02-for-the-ciso", build_ciso(bots)),
               ("03-for-the-cfo", build_cfo(bots))] if not args.only else [])
     pages += [(b.name, build_html(b)) for b in bots]
+    if not args.only:
+        pages += [("99-where-to-go-next", build_closer(bots))]
 
     made = []
     for name, markup in pages:
