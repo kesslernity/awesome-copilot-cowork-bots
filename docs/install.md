@@ -8,7 +8,7 @@ any of this.
 ## The short way, about two minutes
 
 1. Download the bot's `.zip` from [`../dist/`](../dist/).
-2. In Cowork, open **Customize**, then the **Skills** tab.
+2. In Cowork, open **Customize** in the **left navigation**, then the **Skills** tab.
 3. Select the arrow next to **Add**, then **Upload skill**.
 4. Choose the file. Cowork validates it and saves it to your OneDrive.
 5. **Start a new conversation.** Skills are discovered at the start of a session, so one already

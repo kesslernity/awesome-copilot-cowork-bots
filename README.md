@@ -3,6 +3,11 @@
 Agent designs that work inside the Microsoft 365 boundary: your identity, your permissions, your
 approval gates, your audit trail.
 
+[![GitHub stars](https://img.shields.io/github/stars/kesslernity/awesome-copilot-cowork-bots?style=flat-square)](https://github.com/kesslernity/awesome-copilot-cowork-bots/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
+[![23 bots in 8 packs](https://img.shields.io/badge/bots-23%20in%208%20packs-blue.svg?style=flat-square)](#the-catalog)
+[![One-page PDF per bot](https://img.shields.io/badge/guides-one%20page%20per%20bot-orange.svg?style=flat-square)](guides/)
+
 Cowork can send an email, post in Teams, create a document and run a multistep job while you are
 not watching. That is useful and it is also the reason every bot here ships **read-and-prepare
 first**, with sending, posting and deleting behind an approval you give each time. The governance
@@ -17,6 +22,15 @@ about Copilot. What changed in the move is set out honestly in
 roles that **do not port at all**.
 
 Not affiliated with, or endorsed by, Microsoft, xAI or Cursor.
+
+**Start here, free:** [Copilot on One Page](https://www.kesslernity.com/copilot-on-one-page?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=hero)
+is the four-step loop every bot below sits on top of. One page, printable. Turning Cowork on for
+the first time rather than installing a bot into it? The
+[Day-0 Readiness Gate](https://www.kesslernity.com/copilot-day0-readiness?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=day0)
+is the eight pass-or-fail checks to settle first.
+
+**Prefer to browse than clone?** All 23 bots are on one page at
+[kesslernity.com/cowork-bots](https://www.kesslernity.com/cowork-bots?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=hero_site).
 
 ---
 
@@ -37,7 +51,7 @@ Not affiliated with, or endorsed by, Microsoft, xAI or Cursor.
 ## Install a bot in about two minutes
 
 1. Download the bot's `.zip` from [`dist/`](dist/).
-2. In Cowork, open **Customize**, then the **Skills** tab.
+2. In Cowork, open **Customize** in the **left navigation**, then the **Skills** tab.
 3. Select the arrow next to **Add**, then **Upload skill**, and choose the file.
 4. Cowork validates it and saves it to your OneDrive at `/Documents/Cowork/skills/`.
 5. **Start a new conversation.** Skills are discovered when a session begins, so one already open
@@ -74,6 +88,19 @@ describe. How that works, and the two blocks that are written by hand instead:
 You can hold **50 custom skills** but only **25 scheduled prompts**. Skills are cheap, schedules
 are scarce. Every bot here runs on demand, and a schedule is optional unless the bot card argues
 for one. Installing all 23 costs under half your skill allowance.
+
+## AI at Work newsletter, and a free course
+
+📬 **AI at Work** is a biweekly briefing on Microsoft Copilot and enterprise AI: verified news,
+tested prompts, and one honest insight. When something in this repo stops being true because
+Microsoft changed it, that is where the correction gets explained rather than quietly committed.
+👉 **[Subscribe free](https://newsletter.kesslernity.com/?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=newsletter)**.
+No spam, no fluff, unsubscribe anytime.
+
+🎓 **AI Quick Start Essentials** is a free 35-minute course on using AI at work without creating
+a governance problem for someone else to find.
+👉 **[Start the free course](https://trainings.kesslernity.com/?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=course)**:
+no credit card, you just need an account.
 
 ---
 
@@ -147,6 +174,21 @@ Nothing here advises using AI for safety authorisation: permit to work, lock-out
 space, job safety analysis, incident classification or inspection sign-off. AI prepares, people
 decide. Those records live in systems Cowork cannot reach, and that is the correct arrangement.
 
+## Other things I make
+
+Everything in this repo is free under the MIT licence below, and stays free. Elsewhere:
+
+- **[Agent Instruction Block Design Guide](https://store.kesslernity.com/l/eyeauo?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=paid_instruction_block)**
+  ($19): twelve patterns for writing an instruction block, and the failure modes behind each one.
+  The closest paid thing to what the `SKILL.md` files here are doing, for when your own one is
+  not behaving.
+- **[The M365 Copilot Deployment Kit](https://store.kesslernity.com/l/kpfpi?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=paid_kit)**
+  ($97): IT prerequisites, governance before you publish, a 90-day rollout roadmap, field guides
+  and agent templates. Org-wide internal use is included in the price, not a seat upgrade.
+- **[The Copilot Rollout Bundle](https://store.kesslernity.com/l/copilot-rollout-bundle?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=paid_bundle)**
+  ($134): the Deployment Kit with The Real Cost of Copilot and the Honest Kit, which is $31 less
+  than the three apart.
+
 ## Repository
 
 | Path | What |
@@ -162,4 +204,73 @@ decide. Those records live in systems Cowork cannot reach, and that is the corre
 Contributions and corrections welcome. If something here contradicts Microsoft's documentation,
 the documentation wins: open an issue and it gets fixed.
 
+---
+
+## More from Kesslernity
+
+This repo is free and stays free. If it was useful, the rest of the shelf.
+
+**Free**
+
+- 📄 **Copilot on One Page**: the one-page cheat sheet for getting real answers out of Copilot.
+  [Free download](https://www.kesslernity.com/copilot-on-one-page?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=footer)
+- ✅ **Day-0 Readiness Gate**: eight pass-or-fail checks to settle before the first Copilot
+  licence goes out.
+  [Free download](https://www.kesslernity.com/copilot-day0-readiness?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=footer_day0)
+- ⊘ **Should this process exist?**: before you hand a process to a bot, check the process should
+  exist at all. Ten evidence questions, six gates, and the first one that catches it decides.
+  Runs in your browser, nothing you type leaves the page, no signup.
+  [Free tool](https://www.kesslernity.com/tools/triage-floor?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=tool_triage_floor)
+- 📘 **M365 Copilot Field Guide**: 29 interactive reference guides, a decision map and a failure
+  triage table. Browser-readable, print-ready, no account.
+  [kesslernity.com/guides](https://www.kesslernity.com/guides?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=footer_guides)
+- 📺 **YouTube**: Copilot walkthroughs, agent builds, and what actually changed in the roadmap
+  this month. [@Kesslernity](https://www.youtube.com/@Kesslernity?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=footer)
+- 🏢 **Kesslernity on LinkedIn**: Copilot governance and rollout notes as they ship.
+  [Company Page](https://www.linkedin.com/company/kesslernity/?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=footer)
+
+**The other free Copilot repos**
+
+- [awesome-copilot-cowork-skills](https://github.com/kesslernity/awesome-copilot-cowork-skills):
+  37 Cowork skills, the direct sibling to this repo. Inbox triage, meeting prep,
+  transcript-to-actions, and the 16-persona executive review suite.
+- [awesome-microsoft-copilot-prompts](https://github.com/kesslernity/awesome-microsoft-copilot-prompts):
+  500+ tested Copilot prompts, for the jobs that fit in one message and need no bot at all.
+- [awesome-copilot-chat-agents](https://github.com/kesslernity/awesome-copilot-chat-agents):
+  82 agents that run on the free Copilot Chat tier, no premium licence and no Cowork.
+- [awesome-copilot-studio-agents](https://github.com/kesslernity/awesome-copilot-studio-agents):
+  103 Copilot Studio agents, for when you want one governed agent for the org rather than a
+  personal skill per person.
+- [awesome-copilot-office-skills](https://github.com/kesslernity/awesome-copilot-office-skills):
+  27 skills that run inside Copilot in Excel and Copilot in PowerPoint. Same `SKILL.md` shape, a
+  different surface and a different install path.
+- [awesome-copilot-agent-skills](https://github.com/kesslernity/awesome-copilot-agent-skills):
+  Agent Skills for Copilot declarative agents and Cowork.
+
+**Evaluating something other than Copilot?**
+
+- [awesome-mistral-vibe-skills](https://github.com/kesslernity/awesome-mistral-vibe-skills?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=mistral_lane):
+  137 Agent Skills for Mistral Vibe
+- [awesome-mistral-vibe-agents](https://github.com/kesslernity/awesome-mistral-vibe-agents?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=mistral_lane):
+  17 agent profiles, each one run through the loader first, because a broken profile is dropped
+  in silence rather than reported
+- [awesome-mistral-vibe-prompts](https://github.com/kesslernity/awesome-mistral-vibe-prompts?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=mistral_lane):
+  49 prompts for Vibe Work, scheduled tasks and Chat
+
+Same bar, a different runtime. Vendor-neutral is only worth claiming if you have read more than
+one vendor's documentation.
+
+**Rolling Copilot out for a team?**
+
+🛒 Deployment kits, governance playbooks and the honest "when not to use it" guides, built so you
+can do it without a consultant:
+**[kesslernity.com/store](https://www.kesslernity.com/store?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=footer_store)**
+
+Independent and vendor-neutral. Not affiliated with Microsoft, xAI, Cursor or Mistral AI.
+
+---
+
 **Licence: MIT.** See [LICENSE](LICENSE).
+
+*Built by [Mathieu Kessler](https://www.linkedin.com/in/mathieukessler) ·
+[kesslernity.com](https://www.kesslernity.com/?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=byline)*
