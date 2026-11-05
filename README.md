@@ -8,6 +8,9 @@ approval gates, your audit trail.
 [![23 bots in 8 packs](https://img.shields.io/badge/bots-23%20in%208%20packs-blue.svg?style=flat-square)](#the-catalog)
 [![One-page PDF per bot](https://img.shields.io/badge/guides-one%20page%20per%20bot-orange.svg?style=flat-square)](guides/)
 
+> 🌐 **Prefer the web version?** All 23 bots on one page, nothing to clone, every guide
+> downloadable: **[kesslernity.com/cowork-bots](https://www.kesslernity.com/cowork-bots?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=hero_site)**
+
 Cowork can send an email, post in Teams, create a document and run a multistep job while you are
 not watching. That is useful and it is also the reason every bot here ships **read-and-prepare
 first**, with sending, posting and deleting behind an approval you give each time. The governance
@@ -28,9 +31,6 @@ is the four-step loop every bot below sits on top of. One page, printable. Turni
 the first time rather than installing a bot into it? The
 [Day-0 Readiness Gate](https://www.kesslernity.com/copilot-day0-readiness?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=day0)
 is the eight pass-or-fail checks to settle first.
-
-**Prefer to browse than clone?** All 23 bots are on one page at
-[kesslernity.com/cowork-bots](https://www.kesslernity.com/cowork-bots?utm_source=github&utm_medium=readme&utm_campaign=cowork_bots_repo&utm_content=hero_site).
 
 ---
 
